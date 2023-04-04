@@ -1,50 +1,186 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+  import BaseHead from "../components/BaseHead.astro";
+  import Header from "../components/Header.astro";
+  import Footer from "../components/Footer.astro";
+  import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="en" data-theme="custom">
+
+<head>
+  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+</head>
+
+<body>
+  <Header title={SITE_TITLE} />
+  <main>
+    <section class="hero min-h-screen bg-base-200">
+      <div class="hero-content w-full h-full relative overflow-hidden lg:flex lg:flex-row">
+        <div class="max-w-4xl prose lg:flex-1">
+          <h1 class="text-5xl md:text-6xl">MEP Engineering Experts You Can Trust</h1>
+          <p>
+            Trust us to bring your vision to life with our innovative engineering solutions
+          </p>
+          <div class="flex gap-4">
+            <button class="btn-primary">Our Services</button>
+            <button class=" btn-ghost ">View Projects</button>
+          </div>
+        </div>
+
+        <div class="absolute -z-10 w-full h-full top-0 left-0 lg:relative lg:flex-1 lg:max-h-[900px]">
+          <img src="https://source.unsplash.com/yZmHFF-g-W0" alt="duct work"
+            class="object-cover w-full h-full rounded" />
+          <div class="bg-neutral-900 opacity-80 absolute w-full h-full top-0 left-0 lg:hidden" />
+        </div>
+      </div>
+    </section>
+
+    <section class="grid grid-cols-1 gap-10 p-6 md:grid-cols-3 md:py-12">
+      <div class="flex flex-col items-center prose gap-4">
+        <h1 class="text-5xl md:text-6xl mb-0">45+</h1>
+        <p class="mt-0">Years of Expereience</p>
+      </div>
+
+      <div class="flex flex-col items-center prose gap-4">
+        <h1 class="text-5xl md:text-6xl mb-0">400+</h1>
+        <p class="mt-0">Projects Complete</p>
+      </div>
+
+      <div class="flex flex-col items-center prose gap-4">
+        <h1 class="text-5xl md:text-6xl mb-0">120+</h1>
+        <p class="mt-0">Clients</p>
+      </div>
+    </section>
+
+    <section class="p-4 bg-base-300">
+      <div class="prose">
+        <h1>Our Services</h1>
+      </div>
+
+      <div class="grid grid-cols-1 gap-4 p-6 sm:grid-cols-2 md:grid-cols-3">
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Mechanical</h2>
+            <p>
+              Heating <br />
+              Ventalating <br />
+              Air Conditioning <br />
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Electrical</h2>
+            <p>
+              Power <br />
+              Lighting <br />
+              Photometric Calculations<br />
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Plumbing</h2>
+            <p>
+              Water <br />
+              Sanitary <br />
+              Storm Systems<br />
+              Process Piping
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Title 24</h2>
+            <p>
+              Lighting​ <br />
+              Power Distribution​ <br />
+              Voltage Drop <br />
+              ​Mechanical ​Hood Worksheets​ <br />
+              Envelope
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Fire Protection</h2>
+            <p>
+              Fire Detection and Alarm System​<br />
+              Automatic Sprinkler System<br />
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <figure class="max-h-52"><img src="https://source.unsplash.com/random" alt="Shoes" /></figure>
+          <div class="card-body prose">
+            <h2 class="card-title">Power Study</h2>
+            <p>
+
+              Short Circuit Calculation <br />
+              ​Coordination Study<br />
+              ​Arc Flash Hazard Assessment<br />
+              ​Equipment Evaluation
+            </p>
+            <div class="card-actions">
+              <button class="btn-ghost underline -ml-4">Learn More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="p-4 md:p-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:px-10 bg-base-200">
+      <div class="prose md:flex md:flex-col md:justify-center">
+        <h1>Design with Confidence</h1>
+        <p>When it comes to designing commercial buildings, you need a team that delivers professional and high-quality
+          designs. AJ Design Group's licensed engineers provide you with the confidence you need to take on any project.
+          Trust us to deliver top-notch designs that meet your unique needs.</p>
+
+      </div>
+
+      <div class="max-h-[600px] overflow-hidden">
+        <img src="https://source.unsplash.com/random" alt="hvac image" class="object-cover rounded" />
+      </div>
+    </section>
+
+
+    <section class="p-6 md:p-10 bg-base-100">
+      <div class="prose text-center m-auto">
+        <h1 class="text-4xl md:text-5xl ">Take your project to the next level with our expert engineers</h1>
+        <p>We create quality solutions that are on-time, on-budget and stress free</p>
+
+        <button class="btn-secondary">Contact Us</button>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</body>
+
 </html>

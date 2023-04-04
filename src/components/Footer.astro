@@ -1,13 +1,72 @@
 ---
-const today = new Date();
+  const today = new Date();
 ---
 
-<footer>
-	&copy; {today.getFullYear()} YOUR NAME HERE. All rights reserved.
+<footer class="p-10 bg-base-300 text-base-content">
+
+  <div>
+    <span class="footer-title">Services</span>
+    <a href="">Mechanical</a>
+    <a href="">Electrical</a>
+    <a href="">Plumbing</a>
+  </div>
+
+  <div>
+    <span class="footer-title">Company</span>
+    <a href="/about">About Us</a>
+    <a href="/contact">Contact</a>
+    <a href="/services">Services</a>
+  </div>
+
+
+  <div>
+    <span class="footer-title">Legal</span>
+    <a href="/privacy-policy">Privacy Policy</a>
+    <a href="/terms-of-service">Terms of Service</a>
+    <a href="/cookie-settings">Cookie Settings</a>
+  </div>
+
+  <!-- 
+  <div class="flex flex-col items-center gap-6">
+    <div class="prose">
+      <h2>LOGO</h2>
+    </div>
+
+
+
+    <div class="flex gap-8">
+      <a href="/about">About</a>
+      <a href="/services">Services</a>
+      <a href="/contact">Contact</a>
+    </div>
+
+    <div class="flex flex-col gap-4">
+      <div class="prose prose-p:m-1">
+        <p><b>Address:</b></p>
+        <p>528 E Merced Ave, West Covina, CA 91790</p>
+      </div>
+
+      <div class="prose prose-p:m-1">
+        <p><b>Contact:</b></p>
+        <p>(626) 523-1575</p>
+        <p>joeyjiron@aol.com</p>
+      </div>
+    </div> 
+  </div> -->
+  <div class="w-full md:h-full md:w-[1px]">
+    <div class="divider md:divider-vertical md:h-full md:w-[1px] w-full" />
+  </div>
+
+  <div>
+    <div class="prose">
+      <h2>LOGO</h2>
+    </div>
+    <div>
+      &copy; {today.getFullYear()} AJ Design Group. All rights reserved.
+    </div>
+
+    <div>
+      Made with ❤️ by <a class="link" href="https://www.linkedin.com/in/joeyjiron/" target="_blank">Joey Jiron</a>
+    </div>
+  </div>
 </footer>
-<style>
-	footer {
-		padding: 25px;
-		text-align: center;
-	}
-</style>
