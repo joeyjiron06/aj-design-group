@@ -1,73 +1,141 @@
 ---
-import Layout from "../layouts/BlogPost.astro";
+  import Layout from "../layouts/layout.astro";
 ---
 
-<Layout
-  title="About Me"
-  description="Lorem ipsum dolor sit amet"
-  pubDate={new Date("August 08 2021")}
-  updatedDate={new Date("August 08 2022")}
-  heroImage="/placeholder-about.jpg"
->
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo
-    integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis
-    egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In
-    hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat.
-    Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu
-    non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim.
-    Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed
-    vulputate mi. Dictumst quisque sagittis purus sit amet.
-  </p>
+<Layout title="About" description="MEP Consulting company">
+  <main class="pt-20 pb-20 px-6 flex flex-col gap-10">
+    <section class="prose">
+      <h1>About</h1>
 
-  <p>
-    Morbi tristique senectus et netus. Id semper risus in hendrerit gravida
-    rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus
-    sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris
-    rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus
-    dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-    massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius
-    morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras
-    ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est
-    ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa
-    ultricies mi.
-  </p>
+      <p>AJ Design group was founded in 2003???? with a mission to provide top-quality mechanical, electrical and
+        plumbing engineering designs for all construction projects. We are based in Los Angeles but our work spans
+        <strong> Los Angeles County</strong>, <strong>San Diego County</strong>,<strong>Orange County</strong>, and
+        <strong>Ventura County</strong>.
+      </p>
 
-  <p>
-    Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque.
-    Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac
-    felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit
-    amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed
-    elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-    dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra.
-    Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum
-    consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus
-    ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-    facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed
-    risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor
-    vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus
-    non. Amet dictum sit amet justo donec enim.
-  </p>
+      <p>Our engineers specialize in</p>
 
-  <p>
-    Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac
-    ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem
-    viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu
-    ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac
-    tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-    pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim
-    sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam.
-    Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
-  </p>
+      <div class="grid grid-cols-2">
+        <ul>
+          <li>MEP</li>
+          <li>Mechanical</li>
+          <li>Electrical</li>
+          <li>Plumbing</li>
+          <li>Title 24</li>
+        </ul>
 
-  <p>
-    Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus
-    imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu
-    cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum.
-    Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit
-    libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed
-    pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique
-    magna.
-  </p>
+        <ul>
+          <li>Fire Sprinklers</li>
+          <li>Gas</li>
+          <li>Sewer</li>
+          <li>Solar</li>
+          <li>Lighting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <div class="prose">
+        <h1>Our Leaders</h1>
+      </div>
+
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-3">
+        <div class="card bg-base-100 shadow-xl">
+          <a href="/team/joey-jiron"><img src="/img/joeyjiron.png" alt="Joey Jiron" /></a>
+          <div class="card-body">
+            <div class="card-title">Joey Jiron</div>
+            <p>Principal | Mechanical Engineer</p>
+          </div>
+        </div>
+
+        <div class="card bg-base-100 shadow-xl">
+          <a href="/team/joey-jiron"><img src="/img/joeyjiron.png" alt="Joey Jiron" /></a>
+          <div class="card-body">
+            <div class="card-title">Joey A</div>
+            <p>Partner | Electrical Engineer</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="prose">
+      <h1>Frequently Asked Questions</h1>
+
+      <p>Here are some answers to the most comment questions we receive. Please feel free to contact us if you do not
+        see your question answered below.</p>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" />
+
+        <div class="collapse-title text-xl font-medium">
+          Where are we located?
+        </div>
+        <div class="collapse-content">
+          <p>We are proud to be licensed in 15 states and counting. Our main offices are located in San Diego and Orange
+            County.</p>
+        </div>
+      </div>
+
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Do you do custom work?
+        </div>
+        <div class="collapse-content">
+          <p>We do it all! Whether you’ve got a custom commercial, industrial, or residential, project that requires
+            engineering consulting, we’ve got you covered.</p>
+        </div>
+      </div>
+
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What services do you offer?
+        </div>
+        <div class="collapse-content">
+          <p>Our engineers specialize in</p>
+
+          <ul>
+            <li>MEP</li>
+            <li>Mechanical</li>
+            <li>Electrical</li>
+            <li>Plumbing</li>
+            <li>Title 24</li>
+            <li>Fire Sprinklers</li>
+            <li>Gas</li>
+            <li>Sewer</li>
+            <li>Solar</li>
+            <li>Lighting</li>
+            <li>Heat Load Calculations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What does MEP stand for?
+        </div>
+        <div class="collapse-content">
+          <p>MEP stands for mechanical, electrical, and plumbing. AJ Design Group develops engineering plans for your
+            contractor.</p>
+        </div>
+      </div>
+
+      <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Who are your typical clients?
+        </div>
+        <div class="collapse-content">
+          <p>We typically work with architects, designers, general contractors, and design-build contracts. We also deal
+            directly with property/business owners.</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

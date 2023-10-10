@@ -1,70 +1,174 @@
 ---
-  import BaseHead from "../components/BaseHead.astro";
-  import Header from "../components/Header.astro";
-  import Footer from "../components/Footer.astro";
-  import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import Layout from "../layouts/layout.astro";
 ---
 
-<!DOCTYPE html>
-<html lang="en" data-theme="custom">
-
-<head>
-  <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-</head>
-
-<body>
-  <Header title={SITE_TITLE} />
+<Layout
+  title="AJ Design Group"
+  description="MEP Consulting Engineer in Los Angeles"
+>
   <main>
-    <section class="hero min-h-screen bg-base-200">
-      <div class="hero-content w-full h-full relative overflow-hidden lg:flex lg:flex-row">
+    <section
+      class="flex flex-col items-center md:min-h-screen page-width aos:opacity-0 duration-700"
+    >
+      <div
+        class="mt-32 mb-14 flex flex-wrap w-full h-full relative overflow-hidden justify-between"
+      >
+        <div>
+          <h1 class="text-7xl md:text-9xl font-black">
+            <span class="duration-500"> MEP</span>
+            <br />
+            <span
+              class="aos:opacity-0 aos:-translate-y-1/2 duration-500 delay-150"
+              >Engineering</span
+            >
+          </h1>
+          <div class="my-4 opacity-75">&mdash; Since 1999</div>
+        </div>
+
+        <div>
+          <div class="text-xl">Mechanical.</div>
+          <div class="text-xl">Electrical.</div>
+          <div class="text-xl">Plumbing.</div>
+        </div>
+      </div>
+
+      <div class="w-full">
+        <img
+          src="https://source.unsplash.com/qVXFewdVWn4"
+          alt="duct work"
+          class="object-cover w-full h-full rounded aos:opacity-0"
+        />
+      </div>
+
+      <!-- <div
+        class="hero-content w-full h-full relative overflow-hidden lg:flex lg:flex-row"
+      >
         <div class="max-w-4xl prose lg:flex-1">
-          <h1 class="text-5xl md:text-6xl">MEP Engineering Experts You Can Trust</h1>
+          <h1 class="text-5xl md:text-6xl">
+            MEP Engineering Experts You Can Trust
+          </h1>
           <p>
-            Trust us to bring your vision to life with our innovative engineering solutions
+            We bring your vision to life with our innovative engineering
+            solutions
           </p>
           <div class="flex gap-4">
             <button class="btn-primary">Our Services</button>
-            <button class=" btn-ghost ">View Projects</button>
+            <button class="btn-ghost">View Projects</button>
           </div>
         </div>
 
         <div
-          class="absolute -z-10 w-full h-full top-0 left-0 lg:relative lg:flex-1 lg:max-h-[900px] aos:fadeIn aos:slow">
+          class="absolute -z-10 w-full h-full top-0 left-0 lg:relative lg:flex-1 lg:max-h-[900px] aos:opacity-0 duration-500 delay-300"
+        >
+          <img
+            src="https://source.unsplash.com/qVXFewdVWn4"
+            alt="duct work"
+            class="object-cover w-full h-full rounded"
+          />
+
+          <img
+            src="https://source.unsplash.com/fteR0e2BzKo"
+            alt="duct work"
+            class="object-cover w-full h-full rounded"
+          />
           <img src="https://source.unsplash.com/UoIiVYka3VY" alt="duct work"
             class="object-cover w-full h-full rounded" />
-          <!-- <img src="https://source.unsplash.com/yZmHFF-g-W0" alt="duct work" -->
-
-          <!--  -->
-          <div class="bg-neutral-900 opacity-80 absolute w-full h-full top-0 left-0 lg:hidden" />
+          <img src="https://source.unsplash.com/yZmHFF-g-W0" alt="duct work" />
+          <div
+            class="bg-neutral-900 opacity-80 absolute w-full h-full top-0 left-0 lg:hidden"
+          >
+          </div>
         </div>
-      </div>
+      </div> -->
     </section>
 
-    <section class="grid grid-cols-1 gap-10 p-6 md:grid-cols-3 md:py-12 overflow-hidden">
-      <div class="flex flex-col items-center prose gap-4 opacity-0 aos:fadeInLeft aos:slow aos:ratio-70">
+    <section
+      class="grid grid-cols-2 gap-10 p-6 md:grid-cols-3 md:py-12 overflow-hidden page-width"
+    >
+      <div
+        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
+      >
         <h1 class="text-5xl md:text-6xl mb-0">45+</h1>
         <p class="mt-0">Years of Expereience</p>
       </div>
 
-      <div class="flex flex-col items-center prose gap-4 opacity-0 aos:fadeInLeft aos:slow aos:ratio-70">
+      <div
+        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
+      >
         <h1 class="text-5xl md:text-6xl mb-0">400+</h1>
-        <p class="mt-0">Projects Complete</p>
+        <p class="mt-0">Projects Completed</p>
       </div>
 
-      <div class="flex flex-col items-center prose gap-4 opacity-0 aos:fadeInLeft aos:slow aos:ratio-70">
+      <div
+        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
+      >
         <h1 class="text-5xl md:text-6xl mb-0">120+</h1>
         <p class="mt-0">Clients</p>
       </div>
     </section>
 
-    <section class="p-4 bg-base-300">
+    <section class="my-16 max-w-4xl mx-auto">
+      <div class="flex justify-between flex-wrap">
+        <div
+          class="flex flex-col gap-4 aos:-translate-x-1/2 aos:opacity-0 duration-500"
+        >
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">HVAC</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Power</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Lighting</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Power Study</h2>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col gap-4 aos:translate-x-1/2 aos:opacity-0 duration-500"
+        >
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Title 24</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Sprinkler Specifications</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Process Piping</h2>
+          </div>
+
+          <div class="flex items-center gap-2">
+            <span>&#8226;</span>
+            <h2 class="text-3xl">Storm Systems</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- 
+    <section class="page-width border-current border-t-[1px] border-opacity-25">
       <div class="prose">
-        <h1>Our Services</h1>
+        <h1>&#8226; Our Services</h1>
       </div>
 
       <div class="grid grid-cols-1 gap-4 p-6 sm:grid-cols-2 md:grid-cols-3">
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/qVXFewdVWn4" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/LdVZ14861qE" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Mechanical</h2>
             <p>
@@ -78,8 +182,10 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/BJILnzj53_M" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/BJILnzj53_M" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Electrical</h2>
             <p>
@@ -93,8 +199,10 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/4CNNH2KEjhc" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/4CNNH2KEjhc" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Plumbing</h2>
             <p>
@@ -109,15 +217,15 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/tkLltCeA4Ds" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/tkLltCeA4Ds" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Title 24</h2>
             <p>
               Lighting​ <br />
-              Power Distribution​ <br />
-              Voltage Drop <br />
-              ​Mechanical ​Hood Worksheets​ <br />
+              ​Mechanical <br />
               Envelope
             </p>
             <div class="card-actions">
@@ -126,13 +234,14 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/U-4b9CMcr7k" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/U-4b9CMcr7k" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Fire Protection</h2>
             <p>
-              Fire Detection and Alarm System​<br />
-              Automatic Sprinkler System<br />
+              Sprinkler Specifications<br />
             </p>
             <div class="card-actions">
               <button class="btn-ghost underline -ml-4">Learn More</button>
@@ -140,12 +249,13 @@
           </div>
         </div>
 
-        <div class="card bg-base-100 shadow-xl opacity-0 aos:fadeIn aos:slower">
-          <figure class="max-h-52"><img src="https://source.unsplash.com/SuzmwVqHJdo" alt="Shoes" /></figure>
+        <div class="card bg-base-100 shadow-xl aos:opacity-0 duration-500">
+          <figure class="max-h-52">
+            <img src="https://source.unsplash.com/SuzmwVqHJdo" alt="Shoes" />
+          </figure>
           <div class="card-body prose">
             <h2 class="card-title">Power Study</h2>
             <p>
-
               Short Circuit Calculation <br />
               ​Coordination Study<br />
               ​Arc Flash Hazard Assessment<br />
@@ -157,39 +267,160 @@
           </div>
         </div>
       </div>
+    </section> -->
+
+    <section
+      class="bg-base-200 page-width rounded-lg heropattern-temple-neutral-900"
+    >
+      <div class="p-4 md:p-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:px-10">
+        <div
+          class="prose md:flex md:flex-col md:justify-center overflow-hidden"
+        >
+          <h1
+            class="aos:opacity-0 aos:-translate-x-1/2 duration-500 text-5xl md:text-6xl"
+          >
+            Design with Confidence
+          </h1>
+          <p class="aos:opacity-0aos:translate-x-1/2 duration-500 delay-200">
+            When it comes to designing commercial buildings, you need a team
+            that delivers professional and high-quality designs. AJ Design
+            Group's licensed engineers provide you with the confidence you need
+            to take on any project. Trust us to deliver top-notch designs that
+            meet your unique needs.
+          </p>
+        </div>
+
+        <div
+          class="max-h-[600px] overflow-hidden aos:opacity-0 aos:translate-x-1/2 duration-500"
+        >
+          <img
+            src="https://source.unsplash.com/PlBsJ5MybGc"
+            alt="hvac image"
+            class="object-cover rounded"
+          />
+        </div>
+      </div>
     </section>
 
+    <section class="prose page-width py-8">
+      <h2 class="text-4xl md:text-5xl">Frequently Asked Questions</h2>
 
-    <section class="p-4 md:p-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:px-10 bg-base-200">
-      <div class="prose md:flex md:flex-col md:justify-center overflow-hidden">
-        <h1 class="opacity-0 aos:fadeInLeft">Design with Confidence</h1>
-        <p class="opacity-0 aos:fadeInLeft aos:delay-1s">When it comes to designing commercial buildings, you need a
-          team that delivers professional and high-quality
-          designs. AJ Design Group's licensed engineers provide you with the confidence you need to take on any project.
-          Trust us to deliver top-notch designs that meet your unique needs.</p>
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
 
+        <div class="collapse-title text-xl font-medium">
+          Where are we located?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We are proud to be licensed in California. Our main office is
+            located in Los Angeles, but we serve Orange County, San Diego and
+            Ventura County.
+          </p>
+        </div>
       </div>
 
-      <div class="max-h-[600px] overflow-hidden opacity-0 aos:fadeInRight">
-        <img src="https://source.unsplash.com/PlBsJ5MybGc" alt="hvac image" class="object-cover rounded" />
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Do you do custom work?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We do it all! Whether you’ve got a custom commercial, industrial, or
+            residential, project that requires engineering consulting, we’ve got
+            you covered.
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What services do you offer?
+        </div>
+        <div class="collapse-content">
+          <p>Our engineers specialize in</p>
+
+          <ul>
+            <li>MEP</li>
+            <li>Mechanical</li>
+            <li>Electrical</li>
+            <li>Plumbing</li>
+            <li>Title 24</li>
+            <li>Fire Sprinklers</li>
+            <li>Gas</li>
+            <li>Sewer</li>
+            <li>Solar</li>
+            <li>Lighting</li>
+            <li>Heat Load Calculations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What does MEP stand for?
+        </div>
+        <div class="collapse-content">
+          <p>
+            MEP stands for mechanical, electrical, and plumbing. AJ Design Group
+            develops engineering plans for your contractor.
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Who are your typical clients?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We typically work with architects, designers, general contractors,
+            and design-build contracts. We also deal directly with
+            property/business owners.
+          </p>
+        </div>
       </div>
     </section>
-
 
     <section class="p-6 md:p-10 bg-base-100 overflow-hidden">
       <div class="prose text-center m-auto">
-        <h1 class="text-4xl md:text-5xl opacity-0 aos:fadeInDown aos:ratio-50">Take your project to the next level with
-          our
-          expert
-          engineers</h1>
-        <p class="opacity-0 aos:fadeInDown aos:ratio-50">We create quality solutions that are on-time, on-budget and
-          stress free</p>
-
-        <button class="btn-secondary opacity-0 aos:fadeInDown aos:ratio-50">Contact Us</button>
+        <h1
+          class="text-5xl md:text-6xl aos:opacity-0 aos:-translate-y-1/2 duration-500"
+        >
+          Take your project to the next level with AJ Design Group
+        </h1>
+        <p class="aos:opacity-0 aos:-translate-y-1/2 duration-500">
+          We create quality solutions that are on-time, on-budget and stress
+          free.
+        </p>
+        <button
+          class="btn-primary btn-lg uppercase aos:opacity-0 aos:-translate-y-1/2"
+          >Contact Us</button
+        >
       </div>
     </section>
   </main>
-  <Footer />
-</body>
+</Layout>
 
-</html>
+<script>
+  import "../animateOnScroll";
+</script>

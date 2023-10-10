@@ -9,3 +9,15 @@ footer {
 footer a {
   @apply link link-hover;
 }
+
+article {
+  @apply prose;
+}
+
+hr {
+  @apply divider;
+}
+
+.page-width {
+  @apply max-w-7xl mx-auto self-center md:px-8 px-2;
+}
