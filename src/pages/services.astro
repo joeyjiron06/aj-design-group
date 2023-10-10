@@ -1,23 +1,36 @@
 ---
-  import Layout from "../layouts/layout.astro";
+import Layout from "../layouts/layout.astro";
 ---
 
 <Layout title="Services" description="Our MEP services">
-
-  <main class="py-20 px-6 flex flex-col gap-10">
-    <section class="prose">
-      <h1 class="text-6xl">MEP Consultants</h1>
-      <p>Over 35 years of experience as your local MEP consulting firm in <strong>Los Angeles</strong>, <strong>San
-          Diego</strong>, <strong>Orange County</strong>, and <strong>Ventura County</strong>
+  <main class="py-20 px-6 flex flex-col gap-10 page-width">
+    <section class="prose max-w-none">
+      <h1 class="text-6xl">MEP Services</h1>
+      <p>
+        Over 45 years of experience as your local MEP consulting firm in <strong
+          >Los Angeles</strong
+        >, <strong>San Diego</strong>, <strong>Orange County</strong>, and <strong
+          >Ventura County</strong
+        >
       </p>
     </section>
 
-    <secton>
-      <div class="text-orange-500">TODO: fill me in</div>
-      <div>Mechanical</div>
-      <div>Electrical</div>
-      <div>Plumbing</div>
-    </secton>
-  </main>
+    <section class="prose max-w-none">
+      <h2 class="text-4xl font-extrabold">Mechanical</h2>
 
+      <p>Our mechanical engineers do XYZ</p>
+    </section>
+
+    <section class="prose max-w-none">
+      <h2 class="text-4xl font-extrabold">Electrical</h2>
+
+      <p>Our electrical engineers do XYZ</p>
+    </section>
+
+    <section class="prose max-w-none">
+      <h2 class="text-4xl font-extrabold">Plumbing</h2>
+
+      <p>Our plumbing engineers do XYZ</p>
+    </section>
+  </main>
 </Layout>
