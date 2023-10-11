@@ -31,3 +31,10 @@ https://aiko-template.webflow.io/
 https://zenda-template.webflow.io/
 
 https://plan-tool.webflow.io/about-us
+
+
+# things needed from dad
+- [ ] professional headshot for him and any other owners
+- [ ] list of all owners of the company
+- [ ] what year was aj design founded
+

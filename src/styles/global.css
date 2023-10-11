@@ -21,3 +21,7 @@ hr {
 .page-width {
   @apply max-w-7xl mx-auto self-center md:px-8 px-2;
 }
+
+.page-header {
+  @apply text-5xl md:text-6xl font-extrabold;
+}
