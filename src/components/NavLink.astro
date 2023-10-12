@@ -1,5 +1,6 @@
 ---
 import type { HTMLAttributes } from "astro/types";
+import A from "./A.astro";
 
 type Props = HTMLAttributes<"a">;
 
@@ -10,7 +11,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, "");
 ---
 
 <li>
-  <a href={href} class:list={[className, { active: isActive }]} {...props}>
+  <A href={href} class:list={[className, { active: isActive }]} {...props}>
     <slot />
-  </a>
+  </A>
 </li>

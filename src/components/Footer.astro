@@ -1,26 +1,28 @@
 ---
+import A from '../components/A.astro';
+
 const today = new Date();
 ---
 
 <footer class="p-10 text-base-content page-width">
   <div>
     <span class="footer-title">Services</span>
-    <a href="/services#mechanical">Mechanical</a>
-    <a href="/services#electrical">Electrical</a>
-    <a href="/services#plumbing">Plumbing</a>
+    <A href="/services#mechanical">Mechanical</A>
+    <A href="/services#electrical">Electrical</A>
+    <A href="/services#plumbing">Plumbing</A>
   </div>
 
   <div>
     <span class="footer-title">Company</span>
-    <a href="/about">About Us</a>
-    <a href="/contact">Contact</a>
-    <a href="/services">Services</a>
+    <A href="/about">About Us</A>
+    <A href="/contact">Contact</A>
+    <A href="/services">Services</A>
   </div>
 
   <div>
     <span class="footer-title">Legal</span>
-    <a href="/privacy-policy">Privacy Policy</a>
-    <a href="/terms-of-service">Terms of Service</a>
+    <A href="/privacy-policy">Privacy Policy</A>
+    <A href="/terms-of-service">Terms of Service</A>
   </div>
 
   <!-- 
@@ -32,9 +34,9 @@ const today = new Date();
 
 
     <div class="flex gap-8">
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/contact">Contact</a>
+      <A href="/about">About</A>
+      <A href="/services">Services</A>
+      <A href="/contact">Contact</A>
     </div>
 
     <div class="flex flex-col gap-4">
@@ -66,7 +68,7 @@ const today = new Date();
       Made with ❤️ by <a
         class="link"
         href="https://www.linkedin.com/in/joeyjiron/"
-        target="_blank">Joey Jiron</a
+        target="_blank">Joey Jiron</
       >
     </div>
   </div>
