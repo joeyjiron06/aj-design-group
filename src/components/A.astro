@@ -4,11 +4,11 @@ import path from "path";
 
 type Props = HTMLAttributes<"a">;
 
-const BaseUrl = import.meta.env.BASE_URL || "";
+const BaseUrl = import.meta.env.BASE_URL;
 
 const { href, ...props } = Astro.props;
 
-const updatedHref = path.join(href?.toString() || "", BaseUrl);
+const updatedHref = path.join(href?.toString() || "", BaseUrl || "");
 ---
 
 <a href={updatedHref} {...props}>

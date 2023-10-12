@@ -1,9 +1,6 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
-env:
-  BASE_URL: /aj-design-group
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -24,6 +21,10 @@ permissions:
 concurrency:
   group: "pages"
   cancel-in-progress: false
+
+# global environment variables for all jobs
+env:
+  BASE_URL: /aj-design-group
 
 jobs:
   build:
