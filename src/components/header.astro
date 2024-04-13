@@ -1,0 +1,48 @@
+---
+import NavLink from './navLink.astro'
+---
+
+<header class='sticky z-10 w-full bg-base-100 top-0 left-0'>
+  <div class='navbar container mx-auto'>
+    <div class='navbar-start'>
+      <div class='dropdown'>
+        <label tabindex='0' class='btn btn-ghost md:hidden'>
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            class='h-5 w-5'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke='currentColor'
+          >
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M4 6h16M4 12h8m-8 6h16'></path>
+          </svg>
+        </label>
+        <ul
+          tabindex='0'
+          class='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
+        >
+          <NavLink href='/'>Home</NavLink>
+          <NavLink href='/about'>About</NavLink>
+          <NavLink href='/services'>Services</NavLink>
+          <NavLink href='/contact'>Contact</NavLink>
+        </ul>
+      </div>
+      <a href='/' class='btn btn-ghost normal-case text-xl'>LOGO</a>
+    </div>
+    <div class='navbar-end hidden md:flex'>
+      <ul class='menu menu-compact menu-horizontal px-1'>
+        <NavLink href='/about'>About</NavLink>
+        <NavLink href='/services'>Services</NavLink>
+        <NavLink href='/contact'>Contact</NavLink>
+
+        <button type='button' class='btn btn-primary btn-outline btn-sm'
+          >Request a free quote</button
+        >
+      </ul>
+    </div>
+  </div>
+</header>

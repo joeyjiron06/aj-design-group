@@ -1,4 +1,7 @@
-# AJ Design Group Website
+# aj-design-group
+
+[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/withastro-astro-vybmmz)
+
 
 
 # Inspiration
@@ -35,36 +38,3 @@ https://plan-tool.webflow.io/about-us
 - [ ] list of all owners of the company
 - [ ] what year was aj design founded
 
-
-
-# setting up a new project in VSCode
-
-https://patheticgeek.dev/blog/astro-prettier-eslint-vscode
-
-
-comments for blog-= https://giscus.app/
-
-## setting up the repo for the first time
-
-
-**tailwind**
-
-```bash
-pnpm astro add tailwind
-pnpm i --save daisyui postcss postcss-js tailwindcss-hero-patterns @tailwindcss/typography
-```
-
-**eslint formatting**
-
-```bash
-pnpm i --save-dev eslint eslint-plugin-astro eslint-plugin-jsx-a11y prettier prettier-config-standard prettier-plugin-astro @typescript-eslint/parser
-```
-
-https://github.com/ota-meshi/eslint-plugin-astro
-
-
-# ChatGPT
-
-description of company
-
-> A consulting company that provides engineering design drawings for mechanical, eletrical, and plumbing disciplines for construction. The company is called "AJ Design Group". 
