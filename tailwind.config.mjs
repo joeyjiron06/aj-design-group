@@ -1,3 +1,16 @@
+const plugin = require('tailwindcss/plugin');
+
+const animateOnScroll = plugin(({ addVariant, addBase }) => {
+  addBase({
+    [':where([class*="aos:"]:not([data-aos-init="1"]))']: {
+      visibility: 'hidden'
+    }
+  })
+
+  addVariant('aos', '&');
+});
+
+
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
@@ -48,5 +61,6 @@ export default {
     require('@tailwindcss/typography'),
     require('daisyui'),
     require('tailwindcss-hero-patterns'),
+    animateOnScroll
   ],
 }

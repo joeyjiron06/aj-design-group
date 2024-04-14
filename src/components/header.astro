@@ -3,8 +3,8 @@ import NavLink from './navLink.astro'
 ---
 
 <header class='sticky z-10 w-full bg-base-100 top-0 left-0'>
-  <div class='navbar container mx-auto'>
-    <div class='navbar-start'>
+  <div class='navbar container mx-auto justify-between'>
+    <div class='navbar-start w-auto'>
       <div class='dropdown'>
         <label tabindex='0' class='btn btn-ghost md:hidden'>
           <svg
@@ -33,7 +33,7 @@ import NavLink from './navLink.astro'
       </div>
       <a href='/' class='btn btn-ghost normal-case text-xl'>LOGO</a>
     </div>
-    <div class='navbar-end hidden md:flex'>
+    <div class='navbar-end hidden md:flex w-auto'>
       <ul class='menu menu-compact menu-horizontal px-1'>
         <NavLink href='/about'>About</NavLink>
         <NavLink href='/services'>Services</NavLink>
