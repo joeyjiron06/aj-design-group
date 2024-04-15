@@ -1,7 +1,7 @@
 ---
 import Layout from '~/layouts/baseLayout.astro'
 import HeroImage from '~/assets/images/restaurant.jpg'
-import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
+import Construction from '~/assets/images/construction.jpg'
 ---
 
 <Layout title='AJ Design Group'>
@@ -32,11 +32,9 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
           >
         </div>
       </div>
-      <div
-        class='overflow-hidden w-full lg:w-7/12 duration-500 aos:translate-x-10'
-      >
+      <div class='overflow-hidden w-full lg:w-7/12 duration-500'>
         <img
-          src='https://source.unsplash.com/qk1hk6R9rIQ'
+          src={HeroImage.src}
           alt='happy customers at finished restaurant project'
           height=''
           width=''
@@ -48,7 +46,7 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
   </section>
 
   <!-- PROBLEM/SOLUTION SECTION -->
-  <section class='py-16'>
+  <section class='py-16 section-centered'>
     <div
       class='xl:container m-auto px-6 md:px-12 xl:px-16 heropattern-temple-neutral-900 rounded-3xl overflow-hidden'
     >
@@ -56,7 +54,9 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
         class='py-8 lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center'
       >
         <div class='md:w-7/12 lg:w-1/2 prose'>
-          <h2 class='aos:translate-x-1/2 aos:opacity-0 duration-500'>
+          <h2
+            class='aos:-translate-y-8 aos:opacity-0 duration-500 aos:ratio-1 joey-test'
+          >
             Are costly design errors delaying your projects?
           </h2>
           <p class='my-8 aos:opacity-0 duration-500'>
@@ -68,7 +68,7 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
           </p>
           <div class='divide-y space-y-4 divide-gray-100 dark:divide-gray-800'>
             <div
-              class='mt-8 flex gap-4 md:items-center duration-500 aos:opacity-0'
+              class='mt-8 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
             >
               <div class='w-12 h-12 flex gap-4 rounded-full bg-azule/30'>
                 <svg
@@ -97,7 +97,7 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
               </div>
             </div>
             <div
-              class='pt-4 flex gap-4 md:items-center duration-500 aos:opacity-0'
+              class='pt-4 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
             >
               <div class='w-12 h-12 flex gap-4 rounded-full bg-jade/30'>
                 <svg
@@ -114,23 +114,22 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
                     d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'></path>
                 </svg>
               </div>
-              <div class='w-5/6'>
+              <div class='w-5/6 prose'>
                 <h4 class='font-semibold text-lg text-jade'>
                   On-time delivery
                 </h4>
-                <p class='text-gray-500 dark:text-gray-400'>
-                  Asperiores nemo possimus nesciunt quam mollitia.
+                <p>
+                  You can expect detailed, compliant drawings on-time to meet
+                  and exceed your expectations.
                 </p>
               </div>
             </div>
           </div>
         </div>
 
-        <div
-          class='md:w-5/12 lg:w-1/2 duration-500 aos:opacity-0 aos:-translate-x-10'
-        >
+        <div class='md:w-5/12 lg:w-1/2 duration-500 aos:opacity-0'>
           <img
-            src='https://source.unsplash.com/PlBsJ5MybGc'
+            src={Construction.src}
             alt='construction delays due to engineering design problems'
             loading='lazy'
             width=''
@@ -334,7 +333,7 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
 
   <!-- FEATURES -->
   <section>
-    <div class='container px-5 pt-10 pb-24 mx-auto prose max-w-none'>
+    <div class='section-centered px-5 pt-10 pb-24 mx-auto prose max-w-none'>
       <div class='text-center mb-10'>
         <h2 class='duration-500 aos:opacity-0'>Key Offerings</h2>
         <!-- <p class='xl:w-2/4 lg:w-3/4 mx-auto'>
@@ -374,7 +373,7 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
               ]
             }
           ].map(({ heading, details }) => (
-            <div class='p-4 lg:w-1/4 sm:w-1/2 w-full duration-500 aos:opacity-0'>
+            <div class='p-4 lg:w-1/4 sm:w-1/2 w-full duration-500 aos:opacity-0 aos:ratio-1'>
               <h4 class='text-center text-xl lg:text-2xl'>{heading}</h4>
               <div class='flex flex-col text-center items-center -mb-1 space-y-2'>
                 {details.map((detail) => (
@@ -468,8 +467,10 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
             "Sustainability is key in today's world. We offer eco-friendly design alternatives and can incorporate sustainable practices into our engineering solutions to minimize environmental impact."
         }
       ].map(({ question, answer }) => (
-        <details class='collapse collapse-arrow max-w-2xl mx-auto duration-500 aos:opacity-0'>
-          <summary class='collapse-title font-medium'>{question}</summary>
+        <details class='collapse collapse-arrow max-w-2xl mx-auto'>
+          <summary class='collapse-title font-medium duration-500 transition-opacity aos:opacity-0 aos:ratio-1'>
+            {question}
+          </summary>
           <div class='collapse-content'>
             <p>{answer}</p>
           </div>
@@ -535,10 +536,39 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
       .join(' ')
   }
 
+  function getTargetRatio(element: HTMLElement) {
+    const ratioClassName = Array.from(element.classList).find((className) =>
+      className.startsWith(`${ANIM_PREFIX}ratio-`)
+    )
+
+    if (!ratioClassName) {
+      return undefined
+    }
+
+    const numString = ratioClassName.replace(`${ANIM_PREFIX}ratio-`, '')
+    const number = Number(numString)
+
+    if (Number.isNaN(number)) {
+      return undefined
+    }
+
+    return number
+  }
+
   const observer = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
-        if (entry.isIntersecting) {
+        const targetRatio = getTargetRatio(entry.target as HTMLElement) || 0.5
+
+        if ((entry.target as HTMLElement).classList.contains('joey-test')) {
+          console.log({
+            targetRatio,
+            intersectionRatio: entry.intersectionRatio,
+            isIntersecting: entry.isIntersecting
+          })
+        }
+
+        if (entry.intersectionRatio >= targetRatio) {
           animate(entry.target as HTMLElement)
           observer.unobserve(entry.target)
         }
@@ -546,7 +576,8 @@ import ConstructionWorker from '~/assets/images/construction-worker-sm.jpg'
     },
     {
       // top right bottom left
-      rootMargin: '-240px 0px 0px 0px'
+      // rootMargin: '-240px 0px 0px 0px'
+      threshold: [0, 0.25, 0.5, 0.75, 1.0]
     }
   )
 
