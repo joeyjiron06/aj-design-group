@@ -25,23 +25,23 @@ import NavLink from './navLink.astro'
           tabindex='0'
           class='menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52'
         >
-          <NavLink href='/'>Home</NavLink>
-          <NavLink href='/about'>About</NavLink>
-          <NavLink href='/services'>Services</NavLink>
-          <NavLink href='/contact'>Contact</NavLink>
+          <NavLink href='#home'>Home</NavLink>
+          <NavLink href='about'>About</NavLink>
+          <NavLink href='services'>Services</NavLink>
+          <NavLink href='contact'>Contact</NavLink>
         </ul>
       </div>
-      <a href='/' class='btn btn-ghost normal-case text-xl'>LOGO</a>
+      <a href='#home' class='btn btn-ghost normal-case text-xl'>LOGO</a>
     </div>
     <div class='navbar-end hidden md:flex w-auto'>
       <ul class='menu menu-compact menu-horizontal px-1'>
-        <NavLink href='/about'>About</NavLink>
-        <NavLink href='/services'>Services</NavLink>
-        <NavLink href='/contact'>Contact</NavLink>
+        <NavLink href='about'>About</NavLink>
+        <NavLink href='services'>Services</NavLink>
+        <NavLink href='contact'>Contact</NavLink>
 
-        <button type='button' class='btn btn-primary btn-outline btn-sm'
-          >Request a free quote</button
-        >
+        <a href='get-my-free-quote' class='btn btn-primary btn-outline btn-sm'>
+          Get my free quote
+        </a>
       </ul>
     </div>
   </div>

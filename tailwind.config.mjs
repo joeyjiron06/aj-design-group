@@ -17,6 +17,16 @@ export default {
   content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
   theme: {
     extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            maxWidth: 'inherit'
+
+            // ...
+          },
+        },
+      }),
+
       fontFamily: {
         sans: ['Open Sans', ...defaultTheme.fontFamily.sans,]
       },
@@ -42,6 +52,8 @@ export default {
       }
     },
   },
+
+
   daisyui: {
     themes: [
       {

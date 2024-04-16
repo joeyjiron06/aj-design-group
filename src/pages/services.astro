@@ -1,0 +1,165 @@
+---
+import Layout from '../layouts/baseLayout.astro'
+---
+
+<Layout
+  title='AJ Design Group Services'
+  description='Mechanical, Electrical, Plumbing  (MEP) Engineering services'
+>
+  <article class='prose max-w-none'>
+    <section>
+      <h1 class='page-header'>MEP Services</h1>
+      <p>
+        With over 45 years of experience, we are your local MEP consulting firm
+        in <strong>Los Angeles</strong>, <strong>San Diego</strong>, <strong
+          >Orange County</strong
+        >, and <strong>Ventura County</strong>. Our MEP design specialists are
+        licensed engineers who design HVAC systems of varying complexity,
+        plumbing design specifications for piping projects, lighting systems,
+        control systems, fire alarm and building power distribution systems.
+        Please refer to the services below that each department offers.
+      </p>
+    </section>
+
+    <section>
+      <h2 class='not-prose'>
+        <a href='#mechanical' class='no-underline text-4xl font-extrabold'>
+          Mechanical
+        </a>
+      </h2>
+
+      <p>
+        HVAC consulting engineers provide a range of services to ensure that
+        your building&apos;s mechanical systems are running efficiently and
+        effectively. These services include engineering for heating,
+        ventilation, and air conditioning (HVAC) design, and maintenance. The
+        company&apos;s team of experts will work with you to develop a
+        customized solution that meets your specific needs and budget.
+      </p>
+      <p>
+        With the right mechanical services in place, you can ensure that your
+        building is operating at peak efficiency while providing a comfortable
+        and safe environment for its occupants. Here are some services we
+        provide:
+      </p>
+
+      <ul>
+        <li>Mechanical drafting and design</li>
+        <li>Mechanical detailing</li>
+        <li>3D Revit drawings</li>
+        <li>Duct layout drawings</li>
+        <li>Autocad drawings</li>
+        <li>Title-24 energy compliance</li>
+        <li>Fire proteciton system design</li>
+        <li>Heat loss and/or gain calculations</li>
+        <li>Heating and cooling equipment selections</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>
+        <a href='#electrical' class='no-underline text-4xl font-extrabold'>
+          Electrical
+        </a>
+      </h2>
+
+      <p>
+        Our electrical engineers provide a range of services that help clients
+        with their electrical needs. These engineers offer services for lighting
+        systems, control systems, signalization, fire alarm, telecommunications,
+        and building power distribution. Here are some services we provide:
+      </p>
+
+      <ul>
+        <li>Electrical, power, and lighting plans</li>
+        <li>Electirical site plans</li>
+        <li>Electrical schematics</li>
+        <li>Panel schedule</li>
+        <li>Distribution panels</li>
+        <li>Riser Diagrams</li>
+        <li>Wiring diagrams</li>
+        <li>Selection of wire size</li>
+        <li>Selection of MCB rating</li>
+        <li>Selection of lighting fixture</li>
+        <li>Prepare receptacle plan</li>
+        <li>Power distribution systems</li>
+        <li>Interior lighting plan</li>
+        <li>Outdoor lighting plan</li>
+        <li>Lux level lighting</li>
+        <li>Fixture location</li>
+        <li>Lighting fixture schedule</li>
+        <li>Fire alarm systems</li>
+        <li>Emergency and exit lighting</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>
+        <a href='#plumbing' class='no-underline text-4xl font-extrabold'>
+          Plumbing
+        </a>
+      </h2>
+
+      <p>
+        Our plumbing engineers provide a wide range of services to help clients
+        with their plumbing needs. These services include:
+      </p>
+
+      <p>
+        <b>Infrastructure design</b> : Plumbing consulting engineers can design infrastructure
+        systems for buildings, including sewer and storm drain pump systems, bulk
+        oxygen systems, and more. They can also provide expertise in process piping,
+        acid waste piping, and natural gas piping.
+      </p>
+
+      <p>
+        <b>Plumbing engineering design</b>: Plumbing consulting engineers can
+        design integrated plumbing systems that meet client requirements. They
+        can provide designs for sanitary, storm, domestic, water, and gas
+        distribution, as well as medical gases for healthcare and laboratory
+        projects.
+      </p>
+
+      <p>
+        <b>Expert witness services</b>: Plumbing consulting engineers can
+        investigate construction and design issues, product failures, health and
+        safety hazards, and damage claims arising from pipe leaks, floods, slab
+        leaks, sewer leaks, sewer backup, sudsing, gas leaks, explosions, frozen
+        pipes, contamination and corrosion.
+      </p>
+    </section>
+  </article>
+</Layout>
+
+<style>
+  section {
+    @apply container mx-auto px-6 mb-16;
+
+    h2 {
+      @apply mb-6;
+    }
+  }
+</style>
+
+<script>
+  function scrollAnchorIntoView() {
+    const hash = window.location.hash
+
+    if (!hash) {
+      return
+    }
+
+    const [element] = document.querySelectorAll(`[href="${hash}"]`)
+
+    if (!element) {
+      return
+    }
+
+    const yOffset = -60
+    const y = element.getBoundingClientRect().top + window.scrollY + yOffset
+
+    window.scrollTo({ top: y })
+  }
+
+  scrollAnchorIntoView()
+</script>
