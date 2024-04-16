@@ -1,0 +1,146 @@
+---
+import Layout from '~/layouts/baseLayout.astro'
+---
+
+<Layout
+  title='AJ Design Group | Get My Free Quote'
+  description='Get your free quote for your next project.'
+>
+  <!-- bg-gradient-r-transparent-to-primary -->
+  <div class='container px-6 mx-auto lg:max-w-4xl relative rounded-3xl py-12'>
+    <div
+      class='absolute top-0 left-0 w-full h-full bg-gradient-to-b from-base-300 -z-20'
+    >
+    </div>
+
+    <div
+      class='absolute top-0 left-0 w-full h-full heropattern-brickwall-black/50 -z-10'
+    >
+    </div>
+
+    <div class='prose max-w-none mb-12'>
+      <h1>Get my free quote</h1>
+      <p>
+        Please complete the form provided, and we will reach out to you with a
+        comprehensive proposal. Should further information be required, we will
+        request it accordingly. We appreciate your interest and are eager to
+        explore the potential of our collaboration!
+
+        <!-- Please provide a detailed description of your project in the space
+          below. Include the total square footage, specify whether it is a new
+          construction or an existing structure, and indicate if the project is
+          for commercial or residential use. Your comprehensive input will
+          assist us in understanding the scope and requirements of your project
+          more accurately. -->
+      </p>
+    </div>
+
+    <form class='space-y-6'>
+      <div
+        class='flex flex-col items-stretch md:flex-row md:items-center gap-4'
+      >
+        <label class='form-control flex-grow'>
+          <div class='label'>
+            <span class='label-text' aria-label='name'>Name</span>
+          </div>
+
+          <input
+            name='name'
+            type='text'
+            placeholder='Jane Doe'
+            class='input input-bordered w-full text-sm'
+            required
+          />
+        </label>
+
+        <label class='form-control flex-grow'>
+          <div class='label'>
+            <span class='label-text' aria-label='email'>Email</span>
+          </div>
+
+          <input
+            name='email'
+            type='email'
+            placeholder='janedoe@gmail.com'
+            class='input input-bordered w-full text-sm'
+            required
+          />
+        </label>
+      </div>
+
+      <div class='prose max-w-xs'>
+        <h4>What Services are you looking for?</h4>
+
+        <div class='flex items-center gap-4'>
+          <div class='form-control'>
+            <label class='label cursor-pointer gap-3'>
+              <span class='label-text'>Mechanical</span>
+              <input
+                type='checkbox'
+                class='checkbox checked:checkbox-primary'
+                name='services'
+                value='mechanical'
+              />
+            </label>
+          </div>
+
+          <div class='form-control'>
+            <label class='label cursor-pointer gap-3'>
+              <span class='label-text'>Electrical</span>
+              <input
+                type='checkbox'
+                class='checkbox checked:checkbox-primary'
+                name='services'
+                value='electrical'
+              />
+            </label>
+          </div>
+
+          <div class='form-control'>
+            <label class='label cursor-pointer gap-3'>
+              <span class='label-text'>Plumbing</span>
+              <input
+                type='checkbox'
+                class='checkbox checked:checkbox-primary'
+                name='services'
+                value='plumbing'
+              />
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <label class='form-control'>
+        <div class='label'>
+          <span class='label-text' aria-label='Project Details'
+            >Project Details</span
+          >
+        </div>
+        <textarea
+          name='projectDetails'
+          class='textarea textarea-bordered w-full rounded-3xl min-h-52'
+          placeholder='Please add the details of your project here'
+          required></textarea>
+      </label>
+
+      <button type='submit' class='btn btn-accent'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
+          stroke-width='1.5'
+          stroke='currentColor'
+          class='w-6 h-6'
+        >
+          <path
+            stroke-linecap='round'
+            stroke-linejoin='round'
+            d='M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5'
+          ></path>
+        </svg>
+
+        Send</button
+      >
+    </form>
+  </div>
+</Layout>

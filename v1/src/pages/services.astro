@@ -1,14 +1,11 @@
 ---
-import Layout from '../layouts/baseLayout.astro'
+import Layout from "../layouts/layout.astro";
 ---
 
-<Layout
-  title='AJ Design Group Services'
-  description='Mechanical, Electrical, Plumbing  (MEP) Engineering services'
->
-  <article class='prose max-w-none'>
-    <section>
-      <h1 class='page-header'>MEP Services</h1>
+<Layout title="Services" description="Our MEP services">
+  <div class="flex flex-col gap-10 page-width">
+    <section class="prose max-w-none">
+      <h1 class="page-header">MEP Services</h1>
       <p>
         With over 45 years of experience, we are your local MEP consulting firm
         in <strong>Los Angeles</strong>, <strong>San Diego</strong>, <strong
@@ -21,9 +18,9 @@ import Layout from '../layouts/baseLayout.astro'
       </p>
     </section>
 
-    <section>
-      <h2 class='not-prose'>
-        <a href='#mechanical' class='no-underline text-4xl font-extrabold'>
+    <section class="prose max-w-none">
+      <h2>
+        <a href="#mechanical" class="no-underline text-4xl font-extrabold">
           Mechanical
         </a>
       </h2>
@@ -56,9 +53,9 @@ import Layout from '../layouts/baseLayout.astro'
       </ul>
     </section>
 
-    <section>
+    <section class="prose max-w-none">
       <h2>
-        <a href='#electrical' class='no-underline text-4xl font-extrabold'>
+        <a href="#electrical" class="no-underline text-4xl font-extrabold">
           Electrical
         </a>
       </h2>
@@ -93,9 +90,9 @@ import Layout from '../layouts/baseLayout.astro'
       </ul>
     </section>
 
-    <section>
+    <section class="prose max-w-none">
       <h2>
-        <a href='#plumbing' class='no-underline text-4xl font-extrabold'>
+        <a href="#plumbing" class="no-underline text-4xl font-extrabold">
           Plumbing
         </a>
       </h2>
@@ -128,38 +125,25 @@ import Layout from '../layouts/baseLayout.astro'
         pipes, contamination and corrosion.
       </p>
     </section>
-  </article>
+  </div>
 </Layout>
-
-<style>
-  section {
-    @apply container mx-auto px-6 mb-16;
-
-    h2 {
-      @apply mb-6;
-    }
-  }
-</style>
 
 <script>
   function scrollAnchorIntoView() {
-    const hash = window.location.hash
+    const hash = window.location.hash;
 
     if (!hash) {
-      return
+      return;
     }
 
-    const [element] = document.querySelectorAll(`[href="${hash}"]`)
+    const [element] = document.querySelectorAll(`[href="${hash}"]`);
 
     if (!element) {
-      return
+      return;
     }
 
-    const yOffset = -60
-    const y = element.getBoundingClientRect().top + window.scrollY + yOffset
-
-    window.scrollTo({ top: y })
+    element.scrollIntoView();
   }
 
-  scrollAnchorIntoView()
+  scrollAnchorIntoView();
 </script>

@@ -1,0 +1,170 @@
+---
+import Layout from "../layouts/layout.astro";
+---
+
+<Layout title="About" description="MEP Consulting company">
+  <div class="flex flex-col gap-10 page-width">
+    <section class="prose max-w-none">
+      <h1 class="page-header">About</h1>
+
+      <p>
+        AJ Design group was founded in 2003???? with a mission to provide
+        top-quality mechanical, electrical and plumbing engineering designs for
+        all construction projects. We are based in Los Angeles but our work
+        spans
+        <strong> Los Angeles County</strong>, <strong>San Diego County</strong
+        >,<strong>Orange County</strong>, and
+        <strong>Ventura County</strong>.
+      </p>
+
+      <p>Our engineers specialize in the following:</p>
+
+      <div class="grid grid-cols-2">
+        <ul>
+          <li>MEP</li>
+          <li>Mechanical</li>
+          <li>Electrical</li>
+          <li>Plumbing</li>
+          <li>Title 24</li>
+        </ul>
+
+        <ul>
+          <li>Fire Sprinklers</li>
+          <li>Gas</li>
+          <li>Sewer</li>
+          <li>Solar</li>
+          <li>Lighting</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="flex flex-col gap-4">
+      <h2 class="text-4xl font-extrabold">Our Leaders</h2>
+
+      <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+        <div class="flex gap-6 items-center">
+          <div>
+            <!-- <a href="/team/joey-jiron"> -->
+            <img
+              src="/img/joeyjiron.png"
+              alt="Joey Jiron"
+              class="object-contain max-h-96"
+            />
+            <!-- </a> -->
+          </div>
+          <div class="flex flex-col gap-2">
+            <p class="opacity-70">
+              With over 25 years of experience, Joey has been design HVAC
+              systems and running AJ Design Group
+            </p>
+            <div class="text-lg"><b>Joey Jiron</b></div>
+            <p class="opacity-80">Principal | Mechanical Engineer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="prose max-w-none">
+      <h2 class="text-4xl font-extrabold">Frequently Asked Questions</h2>
+
+      <p>
+        Here are some answers to the most comment questions we receive. Please
+        feel free to contact us if you do not see your question answered below.
+      </p>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+
+        <div class="collapse-title text-xl font-medium">
+          Where are we located?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We are proud to be licensed in 15 states and counting. Our main
+            offices are located in San Diego and Orange County.
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Do you do custom work?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We do it all! Whether you’ve got a custom commercial, industrial, or
+            residential, project that requires engineering consulting, we’ve got
+            you covered.
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What services do you offer?
+        </div>
+        <div class="collapse-content">
+          <p>Our engineers specialize in</p>
+
+          <ul>
+            <li>MEP</li>
+            <li>Mechanical</li>
+            <li>Electrical</li>
+            <li>Plumbing</li>
+            <li>Title 24</li>
+            <li>Fire Sprinklers</li>
+            <li>Gas</li>
+            <li>Sewer</li>
+            <li>Solar</li>
+            <li>Lighting</li>
+            <li>Heat Load Calculations</li>
+          </ul>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          What does MEP stand for?
+        </div>
+        <div class="collapse-content">
+          <p>
+            MEP stands for mechanical, electrical, and plumbing. AJ Design Group
+            develops engineering plans for your contractor.
+          </p>
+        </div>
+      </div>
+
+      <div
+        tabindex="0"
+        class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box"
+      >
+        <input type="checkbox" />
+        <div class="collapse-title text-xl font-medium">
+          Who are your typical clients?
+        </div>
+        <div class="collapse-content">
+          <p>
+            We typically work with architects, designers, general contractors,
+            and design-build contracts. We also deal directly with
+            property/business owners.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>
+</Layout>

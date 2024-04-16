@@ -1,182 +1,593 @@
 ---
-import Layout from "../layouts/layout.astro";
-import FAQ from "../components/FAQ.astro";
+import Layout from '~/layouts/baseLayout.astro'
+import HeroImage from '~/assets/images/restaurant.jpg'
+import Construction from '~/assets/images/construction.jpg'
 ---
 
 <Layout
-  title="AJ Design Group"
-  description="MEP Consulting Engineer in Los Angeles"
+  title='AJ Design Group'
+  description='AJ Design Group is a professional Mechanical, Plumbing, and Electrical (MEP) Firm in Los Angeles. Get a free quote on your next project.'
 >
-  <main class="overflow-x-hidden">
-    <section
-      class="flex flex-col items-center md:min-h-screen page-width aos:opacity-0 duration-700"
+  <!-- HERO -->
+
+  <section>
+    <div
+      class='pt-32 md:py-12 container xl:container m-auto px-6 md:px-12 aos:opacity-0 duration-700 min-h-screen'
     >
-      <div
-        class="mt:24 md:mt-32 mb-14 flex flex-wrap w-full h-full justify-between"
-      >
-        <div>
-          <h1 class="font-black" style="font-size: min(15vw, 8rem);">
-            <span class="duration-500"> MEP</span>
-            <br />
-            <span
-              class="aos:opacity-0 aos:-translate-y-1/2 duration-500 delay-150"
-              >Engineering</span
-            >
+      <div class='relative lg:flex lg:items-center lg:gap-12'>
+        <div
+          class='text-center lg:text-left md:mt-12 lg:mt-0 sm:w-10/12 md:w-2/3 sm:mx-auto lg:mr-auto lg:w-6/12'
+        >
+          <h1 class='font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl'>
+            Project completion is within reach.
           </h1>
-          <div class="my-4 opacity-75">&mdash; Since 1999</div>
-        </div>
 
-        <div>
-          <div class="text-xl">Mechanical.</div>
-          <div class="text-xl">Electrical.</div>
-          <div class="text-xl">Plumbing.</div>
-        </div>
-      </div>
-
-      <div class="w-full">
-        <img
-          src="https://source.unsplash.com/qVXFewdVWn4"
-          alt="duct work"
-          class="object-cover w-full h-full rounded aos:opacity-0"
-        />
-      </div>
-    </section>
-
-    <section
-      class="grid grid-cols-2 gap-10 p-6 md:grid-cols-3 md:py-12 overflow-hidden page-width"
-    >
-      <div
-        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
-      >
-        <h1 class="text-5xl md:text-6xl mb-0">45+</h1>
-        <p class="mt-0">Years of Expereience</p>
-      </div>
-
-      <div
-        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
-      >
-        <h1 class="text-5xl md:text-6xl mb-0">400+</h1>
-        <p class="mt-0">Projects Completed</p>
-      </div>
-
-      <div
-        class="flex flex-col items-center prose gap-4 aos:opacity-0 aos:-translate-x-1/2 duration-500"
-      >
-        <h1 class="text-5xl md:text-6xl mb-0">120+</h1>
-        <p class="mt-0">Clients</p>
-      </div>
-    </section>
-
-    <section class="my-16 max-w-4xl mx-auto">
-      <div class="sm:flex sm:justify-between sm:flex-wrap">
-        <div
-          class="flex flex-col gap-4 aos:-translate-x-1/2 aos:opacity-0 duration-500 mb-4"
-        >
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">HVAC</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Power</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Lighting</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Power Study</h2>
-          </div>
-        </div>
-
-        <div
-          class="flex flex-col gap-4 aos:translate-x-1/2 aos:opacity-0 duration-500"
-        >
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Title 24</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Sprinkler Specifications</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Process Piping</h2>
-          </div>
-
-          <div class="flex items-center gap-2">
-            <span>&#8226;</span>
-            <h2 class="text-3xl">Storm Systems</h2>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- brickwall temple -->
-    <section
-      class="bg-base-200 page-width rounded-lg heropattern-temple-neutral-900"
-    >
-      <div
-        class="p-4 md:p-10 grid grid-cols-1 gap-10 md:grid-cols-2 md:px-10 overflow-hidden"
-      >
-        <div
-          class="prose md:flex md:flex-col md:justify-center overflow-hidden"
-        >
-          <h1
-            class="aos:opacity-0 aos:-translate-x-1/2 duration-500 text-5xl md:text-6xl"
-          >
-            Design with Confidence
-          </h1>
-          <p class="aos:opacity-0aos:translate-x-1/2 duration-500 delay-200">
-            When it comes to designing commercial buildings, you need a team
-            that delivers professional and high-quality designs. AJ Design
-            Group's licensed engineers provide you with the confidence you need
-            to take on any project. Trust us to deliver top-notch designs that
-            meet your unique needs.
+          <p class='mt-8'>
+            Precisely engineered Mechanical, Electrical, and Plumbing designs
+            for your next construction endeavor
           </p>
+          <div class='w-full my-12'>
+            <a href='get-my-free-quote' class='btn btn-primary'
+              >Get my free quote</a
+            >
+          </div>
         </div>
-
-        <div
-          class="max-h-[600px] overflow-hidden aos:opacity-0 aos:translate-x-1/2 duration-500"
-        >
+        <div class='overflow-hidden w-full lg:w-7/12 duration-500'>
           <img
-            src="https://source.unsplash.com/PlBsJ5MybGc"
-            alt="hvac image"
-            class="object-cover rounded"
+            src={HeroImage.src}
+            alt='happy customers at finished restaurant project'
+            height=''
+            width=''
+            class='rounded-3xl'
+            loading='lazy'
           />
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <FAQ />
+  <!-- PROBLEM/SOLUTION SECTION -->
+  <section class='py-16 section-centered'>
+    <div
+      class='xl:container m-auto px-6 md:px-12 xl:px-16 heropattern-temple-neutral-900 rounded-3xl overflow-hidden'
+    >
+      <div
+        class='py-8 lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center'
+      >
+        <div class='md:w-7/12 lg:w-1/2 prose'>
+          <h2
+            class='aos:-translate-y-8 aos:opacity-0 duration-500 aos:ratio-1 joey-test'
+          >
+            Are costly design errors delaying your projects?
+          </h2>
+          <p class='my-8 aos:opacity-0 duration-500'>
+            On-site complications due to poor design coordination lead to
+            <em>increased costs</em>, <em>delayed schedules</em>, and a <em
+              >damaged reputation</em
+            >
+            as teams rush to fix avoidable errors.
+          </p>
+          <div class='divide-y space-y-4 divide-gray-100 dark:divide-gray-800'>
+            <div
+              class='mt-8 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
+            >
+              <div class='w-12 h-12 flex gap-4 rounded-full bg-azule/30'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='currentColor'
+                  class='w-6 h-6 m-auto text-azule'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z'
+                  ></path>
+                </svg>
+              </div>
+              <div class='w-5/6 prose'>
+                <h4 class='font-semibold text-lg text-azule'>
+                  Meticulously crafted designs
+                </h4>
+                <p>
+                  We provide expertly made designs across mechanical,
+                  electrical, and plumbing disciplines.
+                </p>
+              </div>
+            </div>
+            <div
+              class='pt-4 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
+            >
+              <div class='w-12 h-12 flex gap-4 rounded-full bg-jade/30'>
+                <svg
+                  xmlns='http://www.w3.org/2000/svg'
+                  fill='none'
+                  viewBox='0 0 24 24'
+                  stroke-width='1.5'
+                  stroke='currentColor'
+                  class='w-6 h-6 text-jade m-auto'
+                >
+                  <path
+                    stroke-linecap='round'
+                    stroke-linejoin='round'
+                    d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'></path>
+                </svg>
+              </div>
+              <div class='w-5/6 prose'>
+                <h4 class='font-semibold text-lg text-jade'>
+                  On-time delivery
+                </h4>
+                <p>
+                  You can expect detailed, compliant drawings on-time to meet
+                  and exceed your expectations.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <section class="p-6 md:p-10 bg-base-100 overflow-hidden">
-      <div class="prose text-center m-auto">
-        <h1
-          class="text-5xl md:text-6xl aos:opacity-0 aos:-translate-y-1/2 duration-500"
-        >
-          Take your project to the next level with AJ Design Group
-        </h1>
-        <p class="aos:opacity-0 aos:-translate-y-1/2 duration-500">
-          We create quality solutions that are on-time, on-budget and stress
-          free.
-        </p>
-        <button
-          class="btn-primary btn-lg uppercase aos:opacity-0 aos:-translate-y-1/2"
-          >Contact Us</button
-        >
+        <div class='md:w-5/12 lg:w-1/2 duration-500 aos:opacity-0'>
+          <img
+            src={Construction.src}
+            alt='construction delays due to engineering design problems'
+            loading='lazy'
+            width=''
+            height=''
+            class='rounded-3xl'
+          />
+        </div>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section>
+    <div class='container px-5 py-24 mx-auto'>
+      <h2 class='text-center mb-20 duration-500 aos:opacity-0'>
+        Unmatched Expertise
+      </h2>
+      <div
+        class='prose max-w-none flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6'
+      >
+        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0'>
+          <div
+            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+          >
+            <!-- <svg
+              fill='none'
+              stroke='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              class='w-6 h-6'
+              viewBox='0 0 24 24'
+            >
+              <path d='M22 12h-4l-3 9L9 3l-3 9H2'></path>
+            </svg> -->
+
+            <svg
+              fill='currentColor'
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              class='w-8 h-8'
+              viewBox='0 0 512 512'
+            >
+              <g>
+                <g>
+                  <path
+                    d='M418.364,0L0,418.364L93.636,512L512,93.636L418.364,0z M22.153,418.364l16.443-16.443l54.875,54.875l11.076-11.076
+			l-54.875-54.875l10.939-10.939l16.477,16.477l11.076-11.077l-16.477-16.477l10.939-10.939l27.485,27.485l11.077-11.076
+			l-27.485-27.485l10.939-10.939l16.477,16.477l11.076-11.077l-16.477-16.477l10.939-10.939l54.874,54.875l11.076-11.077
+			l-54.875-54.875l10.939-10.939l16.477,16.477l11.076-11.076l-16.476-16.474l10.939-10.939l27.485,27.485l11.076-11.076
+			l-27.485-27.485l10.939-10.939l16.477,16.477l11.076-11.076l-16.477-16.477l10.939-10.939l54.874,54.875l11.077-11.076
+			l-54.874-54.875l10.939-10.939l16.477,16.477l11.076-11.076l-16.477-16.477l10.939-10.939l27.485,27.485l11.076-11.076
+			L269.83,170.69l10.939-10.939l16.477,16.477l11.077-11.076l-16.477-16.477l10.939-10.939l54.875,54.875l11.077-11.076
+			l-54.875-54.874l10.939-10.939l16.477,16.477l11.077-11.076l-16.477-16.477l10.939-10.939l27.485,27.485l11.076-11.076
+			l-27.489-27.487l10.939-10.939l16.477,16.477l11.077-11.076l-16.478-16.477l10.939-10.939l54.875,54.875l11.076-11.076
+			l-54.875-54.875l16.443-16.443l71.482,71.482L93.636,489.847L22.153,418.364z'
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <div class='flex-grow pl-6'>
+            <h3 class='mt-0 pt-0'>Precision Engineered Solutions</h3>
+            <p>
+              Your construction projects will to life with meticulously crafted
+              engineering designs. Our team ensures every mechanical,
+              electrical, and plumbing (MEP) plan is optimized for efficiency
+              and sustainability, reducing long-term operational costs.
+            </p>
+            <!-- <a class='mt-3 text-base-content inline-flex items-center'
+              >Learn More
+              <svg
+                fill='none'
+                stroke='currentColor'
+                stroke-linecap='round'
+                stroke-linejoin='round'
+                stroke-width='2'
+                class='w-4 h-4 ml-2'
+                viewBox='0 0 24 24'
+              >
+                <path d='M5 12h14M12 5l7 7-7 7'></path>
+              </svg>
+            </a> -->
+          </div>
+        </div>
+        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0 delay-200'>
+          <div
+            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+          >
+            <svg
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              xmlns='http://www.w3.org/2000/svg'
+              class='w-8 h-8'
+            >
+              <path
+                d='M2 5.5L3.21429 7L7.5 3'
+                stroke-width='1.5'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+              <path
+                d='M2 12.5L3.21429 14L7.5 10'
+                stroke-width='1.5'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+              <path
+                d='M2 19.5L3.21429 21L7.5 17'
+                stroke-width='1.5'
+                stroke-linecap='round'
+                stroke-linejoin='round'></path>
+              <path
+                d='M22 12H17M12 12H13.5'
+                stroke-width='1.5'
+                stroke-linecap='round'></path>
+              <path
+                d='M12 19H17M20.5 19H22'
+                stroke-width='1.5'
+                stroke-linecap='round'></path>
+              <path d='M22 5L12 5' stroke-width='1.5' stroke-linecap='round'
+              ></path>
+            </svg>
+          </div>
+          <div class='flex-grow pl-6'>
+            <h3 class='mt-0 pt-0'>Streamlined Project Execution</h3>
+            <p>
+              Minimizes delays, accelerate construction timelines, and ensures
+              that your project moves forward without a hitch working with our
+              expert project managers.
+            </p>
+          </div>
+        </div>
+        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0 delay-300'>
+          <div
+            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+          >
+            <svg
+              viewBox='0 0 24 24'
+              fill='none'
+              stroke='currentColor'
+              class='w-8 h-8'
+            >
+              <g clip-path='url(#clip0_443_3628)'>
+                <rect
+                  x='2'
+                  y='6'
+                  width='20'
+                  height='12'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></rect>
+                <path
+                  d='M22 10C21.4747 10 20.9546 9.89654 20.4693 9.69552C19.984 9.4945 19.543 9.19986 19.1716 8.82843C18.8001 8.45699 18.5055 8.01604 18.3045 7.53073C18.1035 7.04543 18 6.52529 18 6L22 6L22 10Z'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M18 18C18 16.9391 18.4214 15.9217 19.1716 15.1716C19.9217 14.4214 20.9391 14 22 14L22 18L18 18Z'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M2 14C3.06087 14 4.07828 14.4214 4.82843 15.1716C5.57857 15.9217 6 16.9391 6 18L2 18L2 14Z'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M6 6C6 7.06087 5.57857 8.07828 4.82843 8.82843C4.07828 9.57857 3.06087 10 2 10L2 6H6Z'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M14.0741 9.5H11.3333C10.597 9.5 10 10.0596 10 10.75C10 11.4404 10.597 12 11.3333 12H13.1111C13.8475 12 14.4444 12.5596 14.4444 13.25C14.4444 13.9404 13.8475 14.5 13.1111 14.5H10'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M12 9.51733V8.5'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+                <path
+                  d='M12 15.5173V14.5'
+                  stroke-linecap='round'
+                  stroke-linejoin='round'></path>
+              </g>
+              <defs>
+                <clipPath id='clip0_443_3628'>
+                  <rect width='24' height='24' fill='white'></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div class='flex-grow pl-6'>
+            <h3 class='mt-0 pt-0'>Cost-Effective Engineering</h3>
+            <p>
+              Maximize your investment with AJ Design Group's cost-effective
+              engineering solutions. We deliver high-quality designs that adhere
+              to budget constraints, providing the best value without
+              compromising on quality or performance.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section>
+    <div class='section-centered px-5 pt-10 pb-24 mx-auto prose max-w-none'>
+      <div class='text-center mb-10'>
+        <h2 class='duration-500 aos:opacity-0'>Key Offerings</h2>
+        <!-- <p class='xl:w-2/4 lg:w-3/4 mx-auto'>
+          <b>Leverage Our Extensive Expertise:</b> Gain from our comprehensive industry
+          experience in commercial, residential, and refurbishment projects.
+        </p> -->
+      </div>
+      <div class='flex flex-wrap justify-center'>
+        {
+          [
+            {
+              heading: 'Mechanical',
+              details: [
+                'HVAC System Design',
+                'Plumbing Engineering',
+                'Energy Modeling and Analysis',
+                'Fire Protection',
+                'Sustainable Design Consulting'
+              ]
+            },
+            {
+              heading: 'Electrical',
+              details: [
+                'Power System Studies',
+                'Electrical Testing',
+                'Energy Efficiency Audits',
+                'Lighting'
+              ]
+            },
+            {
+              heading: 'Additional Services',
+              details: [
+                'Title 24',
+                'Process Piping',
+                'Storm Systems',
+                'Sprinkler Specifications'
+              ]
+            }
+          ].map(({ heading, details }) => (
+            <div class='p-4 lg:w-1/4 sm:w-1/2 w-full duration-500 aos:opacity-0 aos:ratio-1'>
+              <h4 class='text-center text-xl lg:text-2xl'>{heading}</h4>
+              <div class='flex flex-col text-center items-center -mb-1 space-y-2'>
+                {details.map((detail) => (
+                  <div class='flex items-center'>
+                    <span class='bg-gray-800 text-green-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
+                      <svg
+                        fill='none'
+                        stroke='currentColor'
+                        stroke-linecap='round'
+                        stroke-linejoin='round'
+                        stroke-width='3'
+                        class='w-3 h-3'
+                        viewBox='0 0 24 24'
+                      >
+                        <path d='M20 6L9 17l-5-5' />
+                      </svg>
+                    </span>
+
+                    <p class='my-0'>{detail}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class='section-centered prose pt-20'>
+    <h2 class='text-center duration-500 aos:opacity-0'>
+      Frequently Asked Questions
+    </h2>
+    {
+      [
+        // {
+        //   question: 'What services does AJ Design Group offer?',
+        //   answer:
+        //     'AJ Design Group specializes in providing detailed engineering design drawings for mechanical, electrical, and plumbing (MEP) disciplines within the construction industry.'
+        // },
+        {
+          question: 'How long has AJ Design Group been in the industry?',
+          answer:
+            'Since 1999 our team has been delivering high-quality design solutions that meet the evolving needs of the construction sector.'
+        },
+        {
+          question: 'What size of projects can AJ Design Group handle?',
+          answer:
+            "Whether it's a small residential project or a large commercial development, our skilled engineers are equipped to deliver exceptional design services tailored to your project's scale."
+        },
+        // {
+        //   question:
+        //     'What makes AJ Design Group different from other engineering consulting firms?',
+        //   answer:
+        //     'Our commitment to precision and client satisfaction sets us apart. We employ a collaborative approach, ensuring that our designs align perfectly with your construction goals.'
+        // },
+        {
+          question: 'Is AJ Design Group licensed and insured?',
+          answer:
+            'Yes, we are fully licensed to operate in California and carry comprehensive insurance for all our services.'
+        },
+        // {
+        //   question:
+        //     'How does AJ Design Group ensure the quality of their designs?',
+        //   answer:
+        //     'Quality is our top priority. We conduct rigorous checks and adhere to the latest industry standards to ensure that every design we deliver is of the highest caliber.'
+        // },
+        {
+          question:
+            "I've heard engineering design services can be expensive. How does AJ Design Group manage costs?",
+          answer:
+            'We believe in transparent pricing and offer competitive rates. Our efficient design process and expertise allow us to provide cost-effective solutions without compromising on quality.'
+        },
+        {
+          question:
+            'What is the typical turnaround time for a project with AJ Design Group?',
+          answer:
+            'Turnaround times can vary based on the complexity of the project. However, we pride ourselves on meeting deadlines and will work diligently to deliver your designs on schedule.'
+        },
+        {
+          question:
+            'How does AJ Design Group handle revisions or changes to the design?',
+          answer:
+            'We understand that changes can be part of the process. Our flexible approach allows for revisions to ensure the final design meets your exact requirements.'
+        },
+        {
+          question:
+            "I'm concerned about the environmental impact of my project. Does AJ Design Group offer sustainable design options?",
+          answer:
+            "Sustainability is key in today's world. We offer eco-friendly design alternatives and can incorporate sustainable practices into our engineering solutions to minimize environmental impact."
+        }
+      ].map(({ question, answer }) => (
+        <details class='collapse collapse-arrow max-w-2xl mx-auto'>
+          <summary class='collapse-title font-medium duration-500 transition-opacity aos:opacity-0 aos:ratio-1'>
+            {question}
+          </summary>
+          <div class='collapse-content'>
+            <p>{answer}</p>
+          </div>
+        </details>
+      ))
+    }
+  </section>
+
+  <!-- CALL TO ACTION -->
+  <section class='section-centered text-center py-20 prose max-w-none'>
+    <h2 class='duration-500 aos:opacity-0 aos:-translate-y-10'>
+      Receive your free quote!
+    </h2>
+    <p class='duration-500 aos:opacity-0 aos:-translate-y-10'>
+      We'd love to chat about your project! <b>Send us a message</b> and we'll happily
+      provide you with a <b>complimentary quote</b>.
+    </p>
+
+    <a
+      href='get-my-free-quote'
+      class='btn btn-primary btn-lg duration-500 aos:opacity-0 aos:-translate-y-10'
+    >
+      Get my free quote
+    </a>
+  </section>
 </Layout>
 
+<style>
+  hgroup {
+    h1,
+    h2 {
+      @apply mb-6;
+    }
+
+    p {
+      @apply mt-0;
+    }
+  }
+
+  h2 {
+    @apply text-3xl font-bold md:text-4xl;
+  }
+
+  .section-centered {
+    @apply container mx-auto px-6;
+  }
+
+  em {
+    @apply font-bold italic underline text-base-content;
+  }
+</style>
+
 <script>
-  import "../animateOnScroll";
+  const ANIM_PREFIX = 'aos:'
+
+  const elements = document.querySelectorAll("[class*='aos']")
+
+  function init(element: HTMLElement) {
+    element.dataset.aosInit = '1'
+  }
+
+  function animate(element: HTMLElement) {
+    element.className = Array.from(element.classList)
+      .filter((className) => !className.startsWith(ANIM_PREFIX))
+      .join(' ')
+  }
+
+  function getTargetRatio(element: HTMLElement) {
+    const ratioClassName = Array.from(element.classList).find((className) =>
+      className.startsWith(`${ANIM_PREFIX}ratio-`)
+    )
+
+    if (!ratioClassName) {
+      return undefined
+    }
+
+    const numString = ratioClassName.replace(`${ANIM_PREFIX}ratio-`, '')
+    const number = Number(numString)
+
+    if (Number.isNaN(number)) {
+      return undefined
+    }
+
+    return number
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const targetRatio = getTargetRatio(entry.target as HTMLElement) || 0.5
+
+        if ((entry.target as HTMLElement).classList.contains('joey-test')) {
+          console.log({
+            targetRatio,
+            intersectionRatio: entry.intersectionRatio,
+            isIntersecting: entry.isIntersecting
+          })
+        }
+
+        if (entry.intersectionRatio >= targetRatio) {
+          animate(entry.target as HTMLElement)
+          observer.unobserve(entry.target)
+        }
+      })
+    },
+    {
+      // top right bottom left
+      // rootMargin: '-240px 0px 0px 0px'
+      threshold: [0, 0.25, 0.5, 0.75, 1.0]
+    }
+  )
+
+  elements.forEach((element) => {
+    if (element instanceof HTMLElement) {
+      init(element)
+      observer.observe(element)
+    }
+  })
 </script>
