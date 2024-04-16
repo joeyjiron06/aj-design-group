@@ -4,7 +4,6 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://joeyjiron06.github.io',
-  base: '/aj-design-group',
+  site: 'https://icy-mud-0918e9b1e.5.azurestaticapps.net',
   integrations: [tailwind({ nesting: true })]
 });
