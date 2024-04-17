@@ -35,7 +35,10 @@ import Layout from '~/layouts/baseLayout.astro'
       </p>
     </div>
 
-    <form class='space-y-6'>
+    <!-- https://submit-form.com/Dk22nWUy4 -->
+    <form class='space-y-6' action='https://submit-form.com/Dk22nWUy4'>
+      <input type='hidden' name='_feedback.dark' value='true' />
+
       <div
         class='flex flex-col items-stretch md:flex-row md:items-center gap-4'
       >
@@ -78,7 +81,7 @@ import Layout from '~/layouts/baseLayout.astro'
               <input
                 type='checkbox'
                 class='checkbox checked:checkbox-primary'
-                name='services'
+                name='services[0]'
                 value='mechanical'
               />
             </label>
@@ -90,7 +93,7 @@ import Layout from '~/layouts/baseLayout.astro'
               <input
                 type='checkbox'
                 class='checkbox checked:checkbox-primary'
-                name='services'
+                name='services[1]'
                 value='electrical'
               />
             </label>
@@ -102,7 +105,7 @@ import Layout from '~/layouts/baseLayout.astro'
               <input
                 type='checkbox'
                 class='checkbox checked:checkbox-primary'
-                name='services'
+                name='services[2]'
                 value='plumbing'
               />
             </label>
