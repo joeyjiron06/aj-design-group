@@ -57,19 +57,17 @@ const { variant = 'default' } = Astro.props
       />
 
       <ul
-        class='absolute left-0 top-0 hidden w-full shrink flex-col items-start gap-1 p-4 py-4 group-has-[input:checked]:flex sm:flex sm:relative sm:w-auto sm:flex-row sm:items-center'
+        class='absolute left-0 top-0 hidden w-full shrink flex-col items-start gap-4 p-4 py-4 group-has-[input:checked]:flex sm:flex sm:relative sm:w-auto sm:flex-row sm:items-center bg-base-100 sm:bg-transparent'
       >
-        <li><NavLink href='about' class='btn btn-ghost'>About</NavLink></li>
-        <li>
-          <NavLink href='services' class='btn btn-ghost'>Services</NavLink>
-        </li>
+        <NavLink href='about' class='btn btn-ghost'>About</NavLink>
+        <NavLink href='services' class='btn btn-ghost'>Services</NavLink>
         <li>
           <a href='contact' class='btn btn-primary'> Give us a call </a>
         </li>
         <label
           for='nav-menu'
           aria-label='close'
-          class='absolute right-4 top-3 sm:hidden cursor-pointer'
+          class='absolute right-4 top-4 sm:hidden cursor-pointer'
         >
           <svg
             xmlns='http://www.w3.org/2000/svg'
