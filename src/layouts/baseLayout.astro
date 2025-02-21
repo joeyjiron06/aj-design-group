@@ -1,13 +1,15 @@
 ---
+import '../styles/index.css'
 import Header from '~/components/header.astro'
 import Footer from '~/components/footer.astro'
 
 interface Props {
   title: string
   description: string
+  headingVariant?: 'transparent' | 'default'
 }
 
-const { title, description } = Astro.props
+const { title, description, headingVariant = 'default' } = Astro.props
 ---
 
 <!doctype html>
@@ -17,17 +19,25 @@ const { title, description } = Astro.props
     <meta name='title' content={title} />
     <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
-    <meta name='viewport' content='width=device-width' />
-    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <link rel='icon' type='image/png' href='/favicon.png' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
 
-    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link
+      href='https://api.fontshare.com/v2/css?f[]=amulya@400,500,700,1&f[]=general-sans@400,500,600,700,1&display=swap'
+      rel='stylesheet'
+    />
+    <!-- <link
+      href='https://api.fontshare.com/v2/css?f[]=hind@400&f[]=teko@600&display=swap'
+      rel='stylesheet'
+    /> -->
+
+    <!-- <link rel='preconnect' href='https://fonts.googleapis.com' />
     <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
     <link
       href='https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'
       rel='stylesheet'
-    />
+    /> -->
 
     <script
       defer
@@ -35,7 +45,7 @@ const { title, description } = Astro.props
       src='https://plausible.io/js/script.tagged-events.js'></script>
   </head>
   <body>
-    <Header />
+    <Header variant={headingVariant} />
     <main>
       <slot />
     </main>

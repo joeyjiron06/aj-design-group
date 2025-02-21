@@ -1,593 +1,650 @@
 ---
 import Layout from '~/layouts/baseLayout.astro'
-import HeroImage from '~/assets/images/restaurant.jpg'
-import Construction from '~/assets/images/construction.jpg'
+import { Image } from 'astro:assets'
+import RestaurantImage from '~/assets/images/restaurant.jpg'
+import HeroImage from '~/assets/images/buildings.jpg'
+import BarricadesImage from '~/assets/images/barricades.jpg'
+import HandshakeImage from '~/assets/images/handshake.jpg'
+import YellowDuctsImage from '~/assets/images/yellow-ducts.jpg'
+import YellowDucts2Image from '~/assets/images/yellow-ducts-2.jpg'
+import HighRiseImage from '~/assets/images/high-rise.jpg'
+import LightBulbsImage from '~/assets/images/light-bulbs.jpg'
+import PlumbingImage from '~/assets/images/plumbing.jpg'
+import { Icon } from 'astro-icon/components'
+import LogoImage from '~/assets/images/logo.png'
 ---
 
 <Layout
   title='AJ Design Group'
   description='AJ Design Group is a professional Mechanical, Plumbing, and Electrical (MEP) Firm in Los Angeles. Get a free quote on your next project.'
+  headingVariant='transparent'
 >
-  <!-- HERO -->
+  <section class='relative overflow-hidden'>
+    <div class='w-full h-full absolute inset-0 -z-10 overflow-hidden'>
+      <Image
+        src={HeroImage}
+        alt='buildings'
+        aria-hidden='true'
+        class:list={['w-full h-full object-cover']}
+        widths={[540, 640, 800, 1024, HeroImage.width]}
+      />
 
-  <section>
+      <div
+        class='absolute inset-0 bg-gradient-to-t from-base-50/90 to-base-900/10'
+      >
+      </div>
+    </div>
+
     <div
-      class='pt-32 md:py-12 container xl:container m-auto px-6 md:px-12 aos:opacity-0 duration-700 min-h-screen'
+      class='container mx-auto grid grid-cols-1 items-end space-y-10 px-3 py-12 sm:px-5 md:px-8 md:py-28 lg:px-12 relative min-h-screen'
     >
-      <div class='relative lg:flex lg:items-center lg:gap-12'>
-        <div
-          class='text-center lg:text-left md:mt-12 lg:mt-0 sm:w-10/12 md:w-2/3 sm:mx-auto lg:mr-auto lg:w-6/12'
-        >
-          <h1 class='font-bold text-4xl md:text-6xl lg:text-5xl xl:text-6xl'>
-            Project completion is within reach.
+      <div class='flex flex-col items-center gap-8 lg:gap-12'>
+        <hgroup class='text-center flex flex-col items-center gap-6'>
+          <h1
+            class='text-balance text-5xl font-extrabold md:text-6xl lg:text-7xl'
+          >
+            <!-- Quality MEP Design for Commercial and Residential Buildings -->
+            <!-- Expert MEP Consulting for Smarter, Faster Building Designs -->
+            Build Faster & Smarter with our Expert MEP Designs
           </h1>
-
-          <p class='mt-8'>
-            Precisely engineered Mechanical, Electrical, and Plumbing designs
-            for your next construction endeavor
+          <p data-id='sub_headline' class='max-w-xl text-base-foreground-dim'>
+            AJ Design Group designs mechanical, electrical, and plumbing
+            drawings that get approved faster and keep your project on schedule.
           </p>
-          <div class='w-full my-12'>
-            <a href='get-my-free-quote' class='btn btn-primary'
-              >Get my free quote</a
-            >
-          </div>
-        </div>
-        <div class='overflow-hidden w-full lg:w-7/12 duration-500'>
-          <img
-            src={HeroImage.src}
-            alt='happy customers at finished restaurant project'
-            height=''
-            width=''
-            class='rounded-3xl'
-            loading='lazy'
-          />
+        </hgroup>
+
+        <div>
+          <a href='contact' class='btn btn-primary'> Give us a call </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PROBLEM/SOLUTION SECTION -->
-  <section class='py-16 section-centered'>
+  <!-- softwares they use -->
+  <!-- https://damassets.autodesk.net/content/dam/autodesk/www/product-imagery/lockup-610x66/revit-2023-lockup-610x66.png -->
+
+  <!-- https://damassets.autodesk.net/content/dam/autodesk/www/product-imagery/lockup-610x66/autocad-2023-white-lockup-610x66.png -->
+
+  <section
+    class='container mx-auto grid grid-cols-1 items-center gap-8 space-y-10 px-3 py-12 sm:px-5 md:grid-cols-2 md:gap-10 md:px-8 lg:px-12 my-20'
+    data-prompt='Write the headings for the benefits section'
+  >
     <div
-      class='xl:container m-auto px-6 md:px-12 xl:px-16 heropattern-temple-neutral-900 rounded-3xl overflow-hidden'
+      class='grid aspect-video h-full min-h-96 w-full place-items-center p-4 border border-base-300 border-dashed'
     >
+      <Image
+        src={BarricadesImage}
+        alt='barricades'
+        class:list={['w-full h-full object-cover']}
+        widths={[540, 640, 800, 1024, BarricadesImage.width]}
+      />
+    </div>
+
+    <div class='space-y-4'>
+      <hgroup class='space-y-4'>
+        <p class='tagline'>No more delays. No more headaches.</p>
+        <h2 class='text-balance text-4xl font-bold md:text-5xl lg:text-6xl'>
+          Costly Delays and Endless Revisions End Today
+        </h2>
+
+        <h2
+          data-id='headline'
+          class='text-balance text-4xl font-bold md:text-5xl lg:text-6xl'
+        >
+        </h2>
+
+        <p data-id='sub_headline'>
+          Getting mechanical, electrical, and plumbing (MEP) drawings shouldn’t
+          slow your project down. But too often, plans are inaccurate, unclear,
+          or don’t meet code requirements—leading to frustrating revisions,
+          missed deadlines, and unexpected costs.
+        </p>
+      </hgroup>
+    </div>
+  </section>
+
+  <section
+    class='container mx-auto my-12 items-center space-y-10 px-3 py-12 sm:px-5 md:gap-10 md:px-8 lg:px-12'
+  >
+    <hgroup
+      class='space-y-2 text-center'
+      data-prompt='Create the copy for a heading group.'
+    >
+      <p class='tagline'>Simple. Accurate. Reliable.</p>
+      <h2 class='text-balance text-4xl font-bold md:text-5xl lg:text-6xl'>
+        Build Faster with our MEP Designs
+      </h2>
+      <!-- <p data-id="subtitle">Save time, cut costs, and keep your project on track.</p> -->
+    </hgroup>
+
+    <div class='grid grid-cols-1 gap-6 lg:grid-cols-2'>
       <div
-        class='py-8 lg:p-16 rounded-[4rem] space-y-6 md:flex flex-row-reverse md:gap-6 justify-center md:space-y-0 lg:items-center'
+        class='grid grid-cols-1 items-center border border-black sm:grid-cols-2 lg:col-span-1 lg:row-span-1 bg-base-100'
       >
-        <div class='md:w-7/12 lg:w-1/2 prose'>
-          <h2
-            class='aos:-translate-y-8 aos:opacity-0 duration-500 aos:ratio-1 joey-test'
+        <hgroup class='p-5'>
+          <p class='mb-2 tagline'>Fewer Revisions</p>
+          <h4
+            class='text-balance text-xl font-bold md:text-2xl lg:text-3xl mb-4'
           >
-            Are costly design errors delaying your projects?
-          </h2>
-          <p class='my-8 aos:opacity-0 duration-500'>
-            On-site complications due to poor design coordination lead to
-            <em>increased costs</em>, <em>delayed schedules</em>, and a <em
-              >damaged reputation</em
-            >
-            as teams rush to fix avoidable errors.
+            Faster Approvals
+          </h4>
+
+          <p data-id='benefit_1_description'>
+            Our precise, code-compliant MEP drawings reduce back-and-forth
+            corrections, helping you get approved quickly and stay on schedule.
           </p>
-          <div class='divide-y space-y-4 divide-gray-100 dark:divide-gray-800'>
-            <div
-              class='mt-8 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
-            >
-              <div class='w-12 h-12 flex gap-4 rounded-full bg-azule/30'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke-width='1.5'
-                  stroke='currentColor'
-                  class='w-6 h-6 m-auto text-azule'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    d='M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m2.25 0H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z'
-                  ></path>
-                </svg>
-              </div>
-              <div class='w-5/6 prose'>
-                <h4 class='font-semibold text-lg text-azule'>
-                  Meticulously crafted designs
-                </h4>
-                <p>
-                  We provide expertly made designs across mechanical,
-                  electrical, and plumbing disciplines.
-                </p>
-              </div>
-            </div>
-            <div
-              class='pt-4 flex gap-4 md:items-center duration-500 aos:opacity-0 aos:ratio-1'
-            >
-              <div class='w-12 h-12 flex gap-4 rounded-full bg-jade/30'>
-                <svg
-                  xmlns='http://www.w3.org/2000/svg'
-                  fill='none'
-                  viewBox='0 0 24 24'
-                  stroke-width='1.5'
-                  stroke='currentColor'
-                  class='w-6 h-6 text-jade m-auto'
-                >
-                  <path
-                    stroke-linecap='round'
-                    stroke-linejoin='round'
-                    d='M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z'></path>
-                </svg>
-              </div>
-              <div class='w-5/6 prose'>
-                <h4 class='font-semibold text-lg text-jade'>
-                  On-time delivery
-                </h4>
-                <p>
-                  You can expect detailed, compliant drawings on-time to meet
-                  and exceed your expectations.
-                </p>
-              </div>
-            </div>
+        </hgroup>
+
+        <div class='relative h-full'>
+          <div
+            class='w-full h-full relative aspect-square overflow-hidden bg-gradient-to-tl from-base-100 to-base-200'
+          >
+            <Image
+              src={HandshakeImage}
+              alt='handshake'
+              class='absolute inset-4 object-cover h-full'
+              widths={[540, 640, 800, 1024, HandshakeImage.width]}
+            />
           </div>
         </div>
+      </div>
 
-        <div class='md:w-5/12 lg:w-1/2 duration-500 aos:opacity-0'>
-          <img
-            src={Construction.src}
-            alt='construction delays due to engineering design problems'
-            loading='lazy'
-            width=''
-            height=''
-            class='rounded-3xl'
+      <div
+        class='grid grid-cols-1 items-center border border-black sm:grid-cols-2 lg:col-span-1 lg:row-span-1 bg-base-100'
+      >
+        <hgroup class='p-5'>
+          <p class='mb-2 tagline'>High-Quality</p>
+          <h4
+            class='text-balance text-xl font-bold md:text-2xl lg:text-3xl mb-4'
+          >
+            Accurate Designs
+          </h4>
+
+          <p data-id='benefit_2_description'>
+            We deliver detailed, reliable plans that ensure everything fits and
+            functions correctly, minimizing costly mistakes during construction.
+          </p>
+        </hgroup>
+
+        <div class='relative h-full'>
+          <div
+            class='w-full h-full relative aspect-square overflow-hidden bg-gradient-to-tl from-base-100 to-base-200'
+          >
+            <Image
+              src={YellowDuctsImage}
+              alt='yellow ducts'
+              class='absolute inset-4 object-cover h-full'
+              widths={[540, 640, 800, 1024, YellowDuctsImage.width]}
+            />
+          </div>
+        </div>
+      </div>
+
+      <div
+        class='grid grid-cols-1 items-center border border-black lg:col-start-2 lg:row-span-2 lg:row-start-1 bg-base-100'
+      >
+        <hgroup class='p-5'>
+          <p class='mb-2 tagline'>Expert Support</p>
+          <h3
+            class='text-balance text-2xl font-bold md:text-3xl lg:text-4xl mb-4'
+          >
+            Seamless Construction Process
+          </h3>
+
+          <p>
+            With years of experience in MEP engineering, our team is here to
+            answer your questions, solve challenges, and keep your project
+            moving forward.
+          </p>
+        </hgroup>
+
+        <div class='w-full overflow-hidden aspect-square p-4 max-h-sm'>
+          <Image
+            src={HighRiseImage}
+            alt='high rise'
+            class='object-contain'
+            widths={[540, 640, 800, 1024, HighRiseImage.width]}
           />
         </div>
       </div>
     </div>
   </section>
 
-  <!-- BENEFITS -->
-  <section>
-    <div class='container px-5 py-24 mx-auto'>
-      <h2 class='text-center mb-20 duration-500 aos:opacity-0'>
-        Unmatched Expertise
-      </h2>
-      <div
-        class='prose max-w-none flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6'
+  <div class='heropattern-banknote-base-200/10'>
+    <section class='relative'>
+      <!-- <div
+        class='absolute inset-0 bg-gradient-to-tr from-base-100/20 to-base-50/10 -z-10'
       >
-        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0'>
-          <div
-            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+      </div> -->
+      <!-- <section class='bg-base-100'> -->
+      <div
+        class='container mx-auto grid grid-cols-1 items-center space-y-10 px-3 py-12 sm:px-5 md:grid-cols-2 md:gap-10 md:px-8 lg:px-12'
+      >
+        <div
+          class='space-y-8 relative border-l border-t border-base-300 border-dashed p-10'
+        >
+          <hgroup
+            class='space-y-2'
+            data-prompt='Create the copy for a heading group.'
           >
-            <!-- <svg
-              fill='none'
-              stroke='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              class='w-6 h-6'
-              viewBox='0 0 24 24'
+            <p class='tagline'>Efficient in Every Design</p>
+            <h2
+              data-id='title'
+              class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'
             >
-              <path d='M22 12h-4l-3 9L9 3l-3 9H2'></path>
-            </svg> -->
+              Mechanical Services
+            </h2>
+          </hgroup>
 
-            <svg
-              fill='currentColor'
-              stroke-linecap='round'
-              stroke-linejoin='round'
-              stroke-width='2'
-              class='w-8 h-8'
-              viewBox='0 0 512 512'
-            >
-              <g>
-                <g>
-                  <path
-                    d='M418.364,0L0,418.364L93.636,512L512,93.636L418.364,0z M22.153,418.364l16.443-16.443l54.875,54.875l11.076-11.076
-			l-54.875-54.875l10.939-10.939l16.477,16.477l11.076-11.077l-16.477-16.477l10.939-10.939l27.485,27.485l11.077-11.076
-			l-27.485-27.485l10.939-10.939l16.477,16.477l11.076-11.077l-16.477-16.477l10.939-10.939l54.874,54.875l11.076-11.077
-			l-54.875-54.875l10.939-10.939l16.477,16.477l11.076-11.076l-16.476-16.474l10.939-10.939l27.485,27.485l11.076-11.076
-			l-27.485-27.485l10.939-10.939l16.477,16.477l11.076-11.076l-16.477-16.477l10.939-10.939l54.874,54.875l11.077-11.076
-			l-54.874-54.875l10.939-10.939l16.477,16.477l11.076-11.076l-16.477-16.477l10.939-10.939l27.485,27.485l11.076-11.076
-			L269.83,170.69l10.939-10.939l16.477,16.477l11.077-11.076l-16.477-16.477l10.939-10.939l54.875,54.875l11.077-11.076
-			l-54.875-54.874l10.939-10.939l16.477,16.477l11.077-11.076l-16.477-16.477l10.939-10.939l27.485,27.485l11.076-11.076
-			l-27.489-27.487l10.939-10.939l16.477,16.477l11.077-11.076l-16.478-16.477l10.939-10.939l54.875,54.875l11.076-11.076
-			l-54.875-54.875l16.443-16.443l71.482,71.482L93.636,489.847L22.153,418.364z'
-                  ></path>
-                </g>
-              </g>
-            </svg>
-          </div>
-          <div class='flex-grow pl-6'>
-            <h3 class='mt-0 pt-0'>Precision Engineered Solutions</h3>
-            <p>
-              Your construction projects will to life with meticulously crafted
-              engineering designs. Our team ensures every mechanical,
-              electrical, and plumbing (MEP) plan is optimized for efficiency
-              and sustainability, reducing long-term operational costs.
-            </p>
-            <!-- <a class='mt-3 text-base-content inline-flex items-center'
-              >Learn More
-              <svg
-                fill='none'
-                stroke='currentColor'
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='2'
-                class='w-4 h-4 ml-2'
-                viewBox='0 0 24 24'
+          <ul
+            class='space-y-5'
+            data-prompt='Write a benefits section where each benefit has a title and a very short description. The titles lay out the key benefits to the user and the description goes into the services and/or features that the company has to offer. The benefits should explain the perks that this company brings.'
+          >
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_1_title'
+                >Design and drafting HVAC systems</span
               >
-                <path d='M5 12h14M12 5l7 7-7 7'></path>
-              </svg>
-            </a> -->
-          </div>
+            </li>
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'>3D Revit drawings</span>
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'>Title-24 energy compliance</span>
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'
+                >Heat loss and gain calculations</span
+              >
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'
+                >Heating and cooling equipment selection</span
+              >
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'>Mechanical specifications</span>
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'>Plan check ready</span>
+            </li>
+          </ul>
         </div>
-        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0 delay-200'>
+
+        <div class='relative p-4'>
           <div
-            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+            class='absolute top-0 right-0 size-12 border-r border-t border-base-300'
           >
-            <svg
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              xmlns='http://www.w3.org/2000/svg'
-              class='w-8 h-8'
-            >
-              <path
-                d='M2 5.5L3.21429 7L7.5 3'
-                stroke-width='1.5'
-                stroke-linecap='round'
-                stroke-linejoin='round'></path>
-              <path
-                d='M2 12.5L3.21429 14L7.5 10'
-                stroke-width='1.5'
-                stroke-linecap='round'
-                stroke-linejoin='round'></path>
-              <path
-                d='M2 19.5L3.21429 21L7.5 17'
-                stroke-width='1.5'
-                stroke-linecap='round'
-                stroke-linejoin='round'></path>
-              <path
-                d='M22 12H17M12 12H13.5'
-                stroke-width='1.5'
-                stroke-linecap='round'></path>
-              <path
-                d='M12 19H17M20.5 19H22'
-                stroke-width='1.5'
-                stroke-linecap='round'></path>
-              <path d='M22 5L12 5' stroke-width='1.5' stroke-linecap='round'
-              ></path>
-            </svg>
           </div>
-          <div class='flex-grow pl-6'>
-            <h3 class='mt-0 pt-0'>Streamlined Project Execution</h3>
-            <p>
-              Minimizes delays, accelerate construction timelines, and ensures
-              that your project moves forward without a hitch working with our
-              expert project managers.
-            </p>
-          </div>
-        </div>
-        <div class='p-4 md:w-1/3 flex duration-500 aos:opacity-0 delay-300'>
+
           <div
-            class='w-12 h-12 inline-flex items-center justify-center rounded-full bg-base-300 text-base-content mb-4 flex-shrink-0'
+            class='absolute bottom-0 left-0 size-12 border-l border-b border-base-300'
           >
-            <svg
-              viewBox='0 0 24 24'
-              fill='none'
-              stroke='currentColor'
-              class='w-8 h-8'
-            >
-              <g clip-path='url(#clip0_443_3628)'>
-                <rect
-                  x='2'
-                  y='6'
-                  width='20'
-                  height='12'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></rect>
-                <path
-                  d='M22 10C21.4747 10 20.9546 9.89654 20.4693 9.69552C19.984 9.4945 19.543 9.19986 19.1716 8.82843C18.8001 8.45699 18.5055 8.01604 18.3045 7.53073C18.1035 7.04543 18 6.52529 18 6L22 6L22 10Z'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M18 18C18 16.9391 18.4214 15.9217 19.1716 15.1716C19.9217 14.4214 20.9391 14 22 14L22 18L18 18Z'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M2 14C3.06087 14 4.07828 14.4214 4.82843 15.1716C5.57857 15.9217 6 16.9391 6 18L2 18L2 14Z'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M6 6C6 7.06087 5.57857 8.07828 4.82843 8.82843C4.07828 9.57857 3.06087 10 2 10L2 6H6Z'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M14.0741 9.5H11.3333C10.597 9.5 10 10.0596 10 10.75C10 11.4404 10.597 12 11.3333 12H13.1111C13.8475 12 14.4444 12.5596 14.4444 13.25C14.4444 13.9404 13.8475 14.5 13.1111 14.5H10'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M12 9.51733V8.5'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-                <path
-                  d='M12 15.5173V14.5'
-                  stroke-linecap='round'
-                  stroke-linejoin='round'></path>
-              </g>
-              <defs>
-                <clipPath id='clip0_443_3628'>
-                  <rect width='24' height='24' fill='white'></rect>
-                </clipPath>
-              </defs>
-            </svg>
           </div>
-          <div class='flex-grow pl-6'>
-            <h3 class='mt-0 pt-0'>Cost-Effective Engineering</h3>
-            <p>
-              Maximize your investment with AJ Design Group's cost-effective
-              engineering solutions. We deliver high-quality designs that adhere
-              to budget constraints, providing the best value without
-              compromising on quality or performance.
-            </p>
-          </div>
+          <Image
+            src={YellowDucts2Image}
+            alt='mechanical services'
+            class='w-full'
+            widths={[540, 640, 800, 1024, YellowDucts2Image.width]}
+          />
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- FEATURES -->
-  <section>
-    <div class='section-centered px-5 pt-10 pb-24 mx-auto prose max-w-none'>
-      <div class='text-center mb-10'>
-        <h2 class='duration-500 aos:opacity-0'>Key Offerings</h2>
-        <!-- <p class='xl:w-2/4 lg:w-3/4 mx-auto'>
-          <b>Leverage Our Extensive Expertise:</b> Gain from our comprehensive industry
-          experience in commercial, residential, and refurbishment projects.
-        </p> -->
-      </div>
-      <div class='flex flex-wrap justify-center'>
-        {
-          [
-            {
-              heading: 'Mechanical',
-              details: [
-                'HVAC System Design',
-                'Plumbing Engineering',
-                'Energy Modeling and Analysis',
-                'Fire Protection',
-                'Sustainable Design Consulting'
-              ]
-            },
-            {
-              heading: 'Electrical',
-              details: [
-                'Power System Studies',
-                'Electrical Testing',
-                'Energy Efficiency Audits',
-                'Lighting'
-              ]
-            },
-            {
-              heading: 'Additional Services',
-              details: [
-                'Title 24',
-                'Process Piping',
-                'Storm Systems',
-                'Sprinkler Specifications'
-              ]
-            }
-          ].map(({ heading, details }) => (
-            <div class='p-4 lg:w-1/4 sm:w-1/2 w-full duration-500 aos:opacity-0 aos:ratio-1'>
-              <h4 class='text-center text-xl lg:text-2xl'>{heading}</h4>
-              <div class='flex flex-col text-center items-center -mb-1 space-y-2'>
-                {details.map((detail) => (
-                  <div class='flex items-center'>
-                    <span class='bg-gray-800 text-green-400 w-4 h-4 mr-2 rounded-full inline-flex items-center justify-center'>
-                      <svg
-                        fill='none'
-                        stroke='currentColor'
-                        stroke-linecap='round'
-                        stroke-linejoin='round'
-                        stroke-width='3'
-                        class='w-3 h-3'
-                        viewBox='0 0 24 24'
-                      >
-                        <path d='M20 6L9 17l-5-5' />
-                      </svg>
-                    </span>
-
-                    <p class='my-0'>{detail}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))
-        }
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class='section-centered prose pt-20'>
-    <h2 class='text-center duration-500 aos:opacity-0'>
-      Frequently Asked Questions
-    </h2>
-    {
-      [
-        // {
-        //   question: 'What services does AJ Design Group offer?',
-        //   answer:
-        //     'AJ Design Group specializes in providing detailed engineering design drawings for mechanical, electrical, and plumbing (MEP) disciplines within the construction industry.'
-        // },
-        {
-          question: 'How long has AJ Design Group been in the industry?',
-          answer:
-            'Since 1999 our team has been delivering high-quality design solutions that meet the evolving needs of the construction sector.'
-        },
-        {
-          question: 'What size of projects can AJ Design Group handle?',
-          answer:
-            "Whether it's a small residential project or a large commercial development, our skilled engineers are equipped to deliver exceptional design services tailored to your project's scale."
-        },
-        // {
-        //   question:
-        //     'What makes AJ Design Group different from other engineering consulting firms?',
-        //   answer:
-        //     'Our commitment to precision and client satisfaction sets us apart. We employ a collaborative approach, ensuring that our designs align perfectly with your construction goals.'
-        // },
-        {
-          question: 'Is AJ Design Group licensed and insured?',
-          answer:
-            'Yes, we are fully licensed to operate in California and carry comprehensive insurance for all our services.'
-        },
-        // {
-        //   question:
-        //     'How does AJ Design Group ensure the quality of their designs?',
-        //   answer:
-        //     'Quality is our top priority. We conduct rigorous checks and adhere to the latest industry standards to ensure that every design we deliver is of the highest caliber.'
-        // },
-        {
-          question:
-            "I've heard engineering design services can be expensive. How does AJ Design Group manage costs?",
-          answer:
-            'We believe in transparent pricing and offer competitive rates. Our efficient design process and expertise allow us to provide cost-effective solutions without compromising on quality.'
-        },
-        {
-          question:
-            'What is the typical turnaround time for a project with AJ Design Group?',
-          answer:
-            'Turnaround times can vary based on the complexity of the project. However, we pride ourselves on meeting deadlines and will work diligently to deliver your designs on schedule.'
-        },
-        {
-          question:
-            'How does AJ Design Group handle revisions or changes to the design?',
-          answer:
-            'We understand that changes can be part of the process. Our flexible approach allows for revisions to ensure the final design meets your exact requirements.'
-        },
-        {
-          question:
-            "I'm concerned about the environmental impact of my project. Does AJ Design Group offer sustainable design options?",
-          answer:
-            "Sustainability is key in today's world. We offer eco-friendly design alternatives and can incorporate sustainable practices into our engineering solutions to minimize environmental impact."
-        }
-      ].map(({ question, answer }) => (
-        <details class='collapse collapse-arrow max-w-2xl mx-auto'>
-          <summary class='collapse-title font-medium duration-500 transition-opacity aos:opacity-0 aos:ratio-1'>
-            {question}
-          </summary>
-          <div class='collapse-content'>
-            <p>{answer}</p>
+    <section>
+      <div
+        class='container mx-auto grid grid-cols-1 items-center space-y-10 px-3 py-12 sm:px-5 md:grid-cols-2 md:gap-10 md:px-8 lg:px-12'
+      >
+        <div class='relative p-4'>
+          <div
+            class='absolute top-0 left-0 size-12 border-l border-t border-base-300'
+          >
           </div>
-        </details>
-      ))
-    }
-  </section>
 
-  <!-- CALL TO ACTION -->
-  <section class='section-centered text-center py-20 prose max-w-none'>
-    <h2 class='duration-500 aos:opacity-0 aos:-translate-y-10'>
-      Receive your free quote!
-    </h2>
-    <p class='duration-500 aos:opacity-0 aos:-translate-y-10'>
-      We'd love to chat about your project! <b>Send us a message</b> and we'll happily
-      provide you with a <b>complimentary quote</b>.
-    </p>
+          <div
+            class='absolute bottom-0 right-0 size-12 border-r border-b border-base-300'
+          >
+          </div>
 
-    <a
-      href='get-my-free-quote'
-      class='btn btn-primary btn-lg duration-500 aos:opacity-0 aos:-translate-y-10'
+          <Image
+            src={LightBulbsImage}
+            alt='light bulbs'
+            class='w-full'
+            widths={[540, 640, 800, 1024, LightBulbsImage.width]}
+          />
+        </div>
+
+        <div class='space-y-8 border-r border-base-300 border-dashed'>
+          <hgroup
+            class='space-y-2'
+            data-prompt='Create the copy for a heading group.'
+          >
+            <p class='tagline'>
+              Powering Your Vision with Precision and Reliability
+            </p>
+            <h2
+              data-id='title'
+              class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'
+            >
+              Electrical Services
+            </h2>
+          </hgroup>
+
+          <ul
+            class='space-y-5'
+            data-prompt='Write a benefits section where each benefit has a title and a very short description. The titles lay out the key benefits to the user and the description goes into the services and/or features that the company has to offer. The benefits should explain the perks that this company brings.'
+          >
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_1_title'
+                >Design lighting and power circuits, including mandatory Title
+                24 controls</span
+              >
+            </li>
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_2_title'
+                >Perform load calculations, single line diagrams, and panel
+                schedules</span
+              >
+            </li>
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'
+                >Ensure Title 24 compliance for lighting systems</span
+              >
+            </li>
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'
+                >Design emergency egress lighting and conduct photometric
+                studies</span
+              >
+            </li>
+
+            <li class='flex items-center gap-3'>
+              <Icon name='tabler:check' class='size-4 text-primary' />
+              <span data-id='benefit_3_title'>Electrical specifications</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class='container mx-auto grid grid-cols-1 items-center space-y-10 px-3 py-12 sm:px-5 md:grid-cols-2 md:gap-10 md:px-8 lg:px-12'
     >
-      Get my free quote
-    </a>
+      <div
+        class='space-y-8 p-10 border-l border-b border-base-300 border-dashed'
+      >
+        <hgroup class='space-y-2'>
+          <p class='tagline'>Efficient and Reliable Water Systems</p>
+          <h2 class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'>
+            Plumbing Services
+          </h2>
+        </hgroup>
+
+        <ul class='space-y-5'>
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_1_title'
+              >Design utilities for cold/hot water and sewer systems</span
+            >
+          </li>
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_2_title'
+              >Develop plumbing plans for city hall submission</span
+            >
+          </li>
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_3_title'>Fuel gas piping systems</span>
+          </li>
+
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_3_title'>Storm water systems</span>
+          </li>
+
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_3_title'>Automatic sprinkler systems</span>
+          </li>
+
+          <li class='flex items-center gap-3'>
+            <Icon name='tabler:check' class='size-4 text-primary' />
+            <span data-id='benefit_3_title'>Plumbing specifications</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class='relative p-4'>
+        <div
+          class='absolute top-0 right-0 size-12 border-r border-t border-base-300'
+        >
+        </div>
+
+        <div
+          class='absolute bottom-0 left-0 size-12 border-l border-b border-base-300'
+        >
+        </div>
+        <Image
+          src={PlumbingImage}
+          class='w-full aspect-square object-cover'
+          alt='plumbing services'
+          widths={[540, 640, 800, 1024, PlumbingImage.width]}
+        />
+      </div>
+    </section>
+  </div>
+
+  <!-- Domestic Cold and Hot Water Systems
+Domestic Waste and Vent Systems
+Fuel Gas Piping Systems
+Storm Water Systems
+Performance Specification of Automatic Sprinkler Systems
+Water Conservation Systems
+ -->
+
+  <section class='bg-base md:bg-base-100/50 py-10 md:pt-24 lg:pb-24'>
+    <div
+      class='container mx-auto space-y-10 px-3 py-12 sm:px-5 md:px-8 lg:space-y-14 lg:px-12 bg-gradient-to-tl to-base from-base-50/10'
+    >
+      <div class='flex flex-col'>
+        <div class='rb-12 md:mb-18 mb-12 w-full max-w-lg space-y-6 lg:mb-20'>
+          <h2
+            data-id='title'
+            class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'
+          >
+            Project Management
+          </h2>
+          <p>
+            At AJ Design Group, we manage MEP projects by integrating designs
+            with architectural and structural elements, overseeing installations
+            for compliance, and managing budgets to meet design specifications
+            and functionality requirements.
+          </p>
+        </div>
+        <div
+          class='grid grid-cols-1 items-start gap-y-12 md:grid-cols-3 md:gap-x-8 md:gap-y-16 lg:gap-x-12'
+        >
+          <div>
+            <div class='rb-5 mb-5 md:mb-6'>
+              <Icon name='tabler:calendar-check' class='size-8 text-primary' />
+            </div>
+            <h3 class='mb-5 text-xl font-bold md:mb-6 md:text-2xl'>
+              Project Coordination
+            </h3>
+            <p class='mb-5 md:mb-6'>
+              Integrating MEP designs seamlessly with architectural and
+              structural elements requires close collaboration with architects,
+              civil engineers, and buidling owners.
+            </p>
+          </div>
+          <div>
+            <div class='rb-5 mb-5 md:mb-6'>
+              <Icon name='tabler:list-check' class='size-8 text-primary' />
+            </div>
+            <h3 class='mb-5 text-xl font-bold md:mb-6 md:text-2xl'>
+              Quality Control
+            </h3>
+            <p class='mb-5 md:mb-6'>
+              Our quality control process for MEP designs involves rigorous
+              reviews and checks to ensure compliance with industry standards,
+              accuracy, and efficiency throughout all project phases.
+            </p>
+          </div>
+          <div>
+            <div class='rb-5 mb-5 md:mb-6'>
+              <Icon name='tabler:coin' class='size-8 text-primary' />
+            </div>
+
+            <h3 class='mb-5 text-xl font-bold md:mb-6 md:text-2xl'>
+              ‍Cost Management
+            </h3>
+            <p class='mb-5 md:mb-6'>
+              Managing project budget, meeting design specs, and controlling
+              costs throughout the project's lifecycle.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='bg-base-100/50'>
+    <div
+      class='container mx-auto space-y-10 px-3 py-16 xl:py-32 sm:px-5 md:px-8 lg:space-y-14 lg:px-12'
+    >
+      <hgroup
+        class='space-y-2 md:space-y-4'
+        data-prompt='Create the copy for a heading group.'
+      >
+        <p class='tagline'>Got Questions?</p>
+        <h2
+          class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'
+          data-id='title'
+        >
+          FAQs
+        </h2>
+      </hgroup>
+
+      <div
+        class='grid grid-cols-1 gap-8 md:grid-cols-2'
+        data-prompt='Create a list of frequently asked questions by customers for this company along with the answers to those questions.'
+      >
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            What types of projects do you handle?
+          </h6>
+          <p data-id='faq1_answer'>
+            We handle both commercial and high-end residential projects,
+            providing comprehensive engineering drawings.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            How long does the design process take?
+          </h6>
+          <p data-id='faq2_answer'>
+            For projects under 5000 sq feet, we offer a turnaround time of 2
+            weeks, while larger projects require collaborative planning to meet
+            deadlines efficiently.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            Do you offer support during the construction phase?
+          </h6>
+          <p data-id='faq3_answer'>
+            Yes, we provide continuous support during the construction phase to
+            address any emerging issues and ensure that the MEP systems are
+            implemented according to plan.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            Do you provide revisions to the drawings?
+          </h6>
+          <p data-id='faq4_answer'>
+            Yes, we offer revisions to ensure our designs meet your expectations
+            and needs.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            What size of projects can AJ Design Group handle?
+          </h6>
+          <p data-id='faq5_answer'>
+            From large commercial developments to small residential projects,
+            our skilled engineers deliver exceptional design services tailored
+            to your project's scale.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 class='py-3 font-medium'>
+            Is AJ Design Group licensed and insured?
+          </h6>
+          <p data-id='faq6_answer'>
+            Yes, we are fully licensed to operate in California and carry
+            insurance for all our services.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class='relative py-32 text-white'
+    data-prompt='Create the copy for a heading group in the call to action section.'
+  >
+    <div class='absolute inset-0 -z-10'>
+      <Image
+        src={RestaurantImage}
+        class='h-full w-full object-cover'
+        alt='call to action'
+        widths={[600, 800, 1024, 1280, RestaurantImage.width]}
+      />
+
+      <div class='absolute inset-0 bg-black/60'></div>
+    </div>
+
+    <div
+      class='container mx-auto space-y-8 px-3 py-12 text-center sm:px-5 md:px-8 lg:px-12'
+    >
+      <h2
+        data-id='title'
+        class='text-balance text-3xl font-bold md:text-4xl lg:text-5xl'
+      >
+        Let's Bring Your Vision to Life
+      </h2>
+
+      <p data-id='subtitle'>
+        Contact us for tailored Mechanical, Electrical, and Plumbing solutions
+      </p>
+
+      <div class='mx-auto inline-flex flex-col gap-3 sm:text-left'>
+        <a href='contact' class='shrink-0 btn btn-primary'>Give us a call</a>
+      </div>
+    </div>
   </section>
 </Layout>
 
-<style>
-  hgroup {
-    h1,
-    h2 {
-      @apply mb-6;
-    }
-
-    p {
-      @apply mt-0;
-    }
-  }
-
-  h2 {
-    @apply text-3xl font-bold md:text-4xl;
-  }
-
-  .section-centered {
-    @apply container mx-auto px-6;
-  }
-
-  em {
-    @apply font-bold italic underline text-base-content;
-  }
-</style>
-
-<script>
-  const ANIM_PREFIX = 'aos:'
-
-  const elements = document.querySelectorAll("[class*='aos']")
-
-  function init(element: HTMLElement) {
-    element.dataset.aosInit = '1'
-  }
-
-  function animate(element: HTMLElement) {
-    element.className = Array.from(element.classList)
-      .filter((className) => !className.startsWith(ANIM_PREFIX))
-      .join(' ')
-  }
-
-  function getTargetRatio(element: HTMLElement) {
-    const ratioClassName = Array.from(element.classList).find((className) =>
-      className.startsWith(`${ANIM_PREFIX}ratio-`)
-    )
-
-    if (!ratioClassName) {
-      return undefined
-    }
-
-    const numString = ratioClassName.replace(`${ANIM_PREFIX}ratio-`, '')
-    const number = Number(numString)
-
-    if (Number.isNaN(number)) {
-      return undefined
-    }
-
-    return number
-  }
-
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        const targetRatio = getTargetRatio(entry.target as HTMLElement) || 0.5
-
-        if ((entry.target as HTMLElement).classList.contains('joey-test')) {
-          console.log({
-            targetRatio,
-            intersectionRatio: entry.intersectionRatio,
-            isIntersecting: entry.isIntersecting
-          })
-        }
-
-        if (entry.intersectionRatio >= targetRatio) {
-          animate(entry.target as HTMLElement)
-          observer.unobserve(entry.target)
-        }
-      })
-    },
-    {
-      // top right bottom left
-      // rootMargin: '-240px 0px 0px 0px'
-      threshold: [0, 0.25, 0.5, 0.75, 1.0]
-    }
-  )
-
-  elements.forEach((element) => {
-    if (element instanceof HTMLElement) {
-      init(element)
-      observer.observe(element)
-    }
-  })
-</script>
+<style></style>

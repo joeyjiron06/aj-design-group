@@ -1,7 +1,98 @@
 ---
 import NavLink from './navLink.astro'
+import { Image } from 'astro:assets'
+import Logo from '~/assets/images/logo.png'
+
+interface Props {
+  variant: 'transparent' | 'default'
+}
+
+const { variant = 'default' } = Astro.props
 ---
 
+<header
+  class={`${
+    variant === 'transparent'
+      ? 'absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-base-50/80 to-transparent'
+      : 'bg-base'
+  }`}
+>
+  <nav
+    class='flex items-center justify-between py-2 container mx-auto px-3 sm:px-5 md:px-8 lg:px-12'
+  >
+    <div class='shrink-0 grow'>
+      <a href='/' class='inline-flex items-center gap-2'>
+        <div class='bg-base inline-block rounded-full'>
+          <Image
+            src={Logo}
+            alt='AJ Design Group'
+            class='object-contain size-16 block'
+          />
+        </div>
+        <p class='text-lg font-bold hidden lg:block'>AJ Design Group</p>
+      </a>
+    </div>
+
+    <label class='group'>
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 24 24'
+        stroke-width='1.5'
+        stroke='currentColor'
+        class='block size-6 cursor-pointer sm:hidden'
+      >
+        <path
+          stroke-linecap='round'
+          stroke-linejoin='round'
+          d='M3.75 9h16.5m-16.5 6.75h16.5'
+        >
+        </path>
+      </svg>
+      <input
+        id='nav-menu'
+        type='checkbox'
+        aria-label='Menu'
+        class='appearance-none sm:block'
+      />
+
+      <ul
+        class='absolute left-0 top-0 hidden w-full shrink flex-col items-start gap-1 p-4 py-4 group-has-[input:checked]:flex sm:flex sm:relative sm:w-auto sm:flex-row sm:items-center'
+      >
+        <li><NavLink href='about' class='btn btn-ghost'>About</NavLink></li>
+        <li>
+          <NavLink href='services' class='btn btn-ghost'>Services</NavLink>
+        </li>
+        <li>
+          <a href='contact' class='btn btn-primary'> Give us a call </a>
+        </li>
+        <label
+          for='nav-menu'
+          aria-label='close'
+          class='absolute right-4 top-3 sm:hidden cursor-pointer'
+        >
+          <svg
+            xmlns='http://www.w3.org/2000/svg'
+            fill='none'
+            viewBox='0 0 24 24'
+            stroke-width='1.5'
+            stroke='currentColor'
+            class='size-6'
+          >
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              d='M6 18 18 6M6 6l12 12'
+            >
+            </path>
+          </svg>
+        </label>
+      </ul>
+    </label>
+  </nav>
+</header>
+
+<!-- 
 <header class='sticky z-10 w-full top-0 left-0 bg-base-100'>
   <div class='navbar container mx-auto justify-between'>
     <div class='navbar-start w-auto'>
@@ -49,4 +140,4 @@ import NavLink from './navLink.astro'
       </ul>
     </div>
   </div>
-</header>
+</header> -->

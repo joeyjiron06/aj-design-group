@@ -1,7 +1,123 @@
 ---
+import { Image } from 'astro:assets'
+import Logo from '~/assets/images/logo.png'
 const today = new Date()
 ---
 
+<footer
+  class='container mx-auto space-y-10 px-3 sm:px-5 md:px-8 lg:space-y-14 lg:px-12 py-8 md:py-12'
+>
+  <div class='items-center gap-16 lg:grid lg:grid-cols-6'>
+    <!-- LOGO -->
+    <div
+      data-prompt='Write a title for the main call to action heading in a footer. This is the users last chance to take action on the page.'
+      class='space-y-6 lg:col-span-4'
+    >
+      <a href='/' class='inline-flex items-center gap-4'>
+        <div class='inline-block rounded-full'>
+          <Image
+            src={Logo}
+            alt='AJ Design Group'
+            class='object-contain size-32 block'
+          />
+        </div>
+        <!-- <p class='text-lg font-bold'>AJ Design Group</p> -->
+      </a>
+
+      <div class='space-y-2 text-sm'>
+        <p class='font-semibold'>Location:</p>
+        <p>Los Angeles, CA</p>
+      </div>
+
+      <div class='space-y-2 text-sm'>
+        <p class='font-semibold'>Contact:</p>
+        <div>
+          <p>626 523 1575</p>
+          <p>joeyjiron@aol.com</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- columns of links -->
+    <div
+      class='flex flex-1 flex-col gap-12 py-12 sm:flex-row md:py-16 lg:col-span-2 text-sm'
+    >
+      <nav class='space-y-5 sm:grow'>
+        <ul class='space-y-5'>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='about'>About</a>
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='contact'>Contact</a>
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='services'>Services</a>
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='privacy-policy'>Privacy Policy</a
+            >
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='terms-of-service'>Terms of Services</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <nav class='space-y-5 sm:grow'>
+        <ul class='space-y-5'>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='services#mechanical'>Mechanical</a
+            >
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='services#electrical'>Electrical</a
+            >
+          </li>
+          <li>
+            <a
+              class='hover:underline hover:text-base-foreground transition-colors duration-150 ease-in-out'
+              href='services#plumbing'>Plumbing</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <hr class='mb-0 mt-12 h-1 w-full border-t border-t-black p-0' />
+
+  <div
+    class='flex flex-col gap-4 py-8 text-sm font-light md:flex-row-reverse md:items-center md:justify-between md:py-12'
+  >
+    <p>
+      Made with ❤️ by <a
+        href='https://landmarkai.dev?from=ajdesigngroup'
+        target='_blank'
+        class='underline text-primary'>landmarkai.dev</a
+      >
+    </p>
+
+    <p class='md:grow'>
+      © {today.getFullYear()} AJ Design Group. All rights reserved.
+    </p>
+  </div>
+</footer>
+<!-- 
 <footer class='footer px-6 py-10 text-base-content container mx-auto'>
   <div>
     <span class='footer-title'>Services</span>
@@ -43,4 +159,4 @@ const today = new Date()
       </a>
     </div>
   </div>
-</footer>
+</footer> -->

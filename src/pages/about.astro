@@ -3,7 +3,7 @@ import Layout from '../layouts/baseLayout.astro'
 ---
 
 <Layout title='About' description='MEP Consulting company'>
-  <article class='prose max-w-none'>
+  <article class='prose prose-invert max-w-none py-12'>
     <section>
       <h1 class='page-header'>About</h1>
 
@@ -38,24 +38,7 @@ import Layout from '../layouts/baseLayout.astro'
       </div>
     </section>
 
-    <section class='flex flex-col gap-4'>
-      <h2 class='text-4xl font-extrabold'>Our Leaders</h2>
-
-      <div class='grid grid-cols-1 gap-10 md:grid-cols-2'>
-        <div class='flex gap-6 items-center'>
-          <div class='flex flex-col gap-2'>
-            <p>
-              With over 25 years of experience, Joey has been design HVAC
-              systems and running AJ Design Group
-            </p>
-            <p class='text-lg py-0 my-0'><b>Joey Jiron</b></p>
-            <p>Principal | Mechanical Engineer</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class=''>
+    <section>
       <h2 class='text-4xl font-extrabold'>Frequently Asked Questions</h2>
 
       <p>
@@ -63,61 +46,76 @@ import Layout from '../layouts/baseLayout.astro'
         feel free to contact us if you do not see your question answered below.
       </p>
 
-      {
-        [
-          {
-            question: 'Where are we located?',
-            answer:
-              'We are proud to be licensed in 15 states and counting. Our main offices are located in San Diego and Orange County.'
-          },
-          {
-            question: 'Do you do custom work?',
-            answer:
-              "We do it all! Whether you've got a custom commercial, industrial, or residential, project that requires engineering consulting, we've got you covered."
-          },
-          {
-            question: 'What services do you offer?',
-            answer: (
-              <ul>
-                <li>MEP</li>
-                <li>Mechanical</li>
-                <li>Electrical</li>
-                <li>Plumbing</li>
-                <li>Title 24</li>
-                <li>Fire Sprinklers</li>
-                <li>Gas</li>
-                <li>Sewer</li>
-                <li>Solar</li>
-                <li>Lighting</li>
-                <li>Heat Load Calculations</li>
-              </ul>
-            )
-          },
-          {
-            question: 'What does MEP stand for?',
-            answer:
-              'MEP stands for mechanical, electrical, and plumbing. AJ Design Group develops engineering plans for your contractor.'
-          },
-          {
-            question: 'Who are your typical clients?',
-            answer:
-              'We typically work with architects, designers, general contractors and design-build contracts. We also deal directly with property/business owners.'
-          }
-        ].map(({ question, answer }) => (
-          <details class='collapse collapse-arrow max-w-lg'>
-            <summary class='collapse-title font-medium'>{question}</summary>
-            <div class='collapse-content'>
-              <p>{answer}</p>
-            </div>
-          </details>
-        ))
-      }
+      <div class='grid grid-cols-1 gap-8 md:grid-cols-2'>
+        <div class='py-2'>
+          <h6 data-id='faq1_question' class='py-3 font-semibold'>
+            What types of projects do you handle?
+          </h6>
+          <p data-id='faq1_answer'>
+            We handle both commercial and high-end residential projects,
+            providing comprehensive engineering drawings.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 data-id='faq2_question' class='py-3 font-semibold'>
+            How long does the design process take?
+          </h6>
+          <p data-id='faq2_answer'>
+            For projects under 5000 sq feet, we offer a turnaround time of 2
+            weeks, while larger projects require collaborative planning to meet
+            deadlines efficiently.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 data-id='faq3_question' class='py-3 font-semibold'>
+            Do you offer support during the construction phase?
+          </h6>
+          <p data-id='faq3_answer'>
+            Yes, we provide continuous support during the construction phase to
+            address any emerging issues and ensure that the MEP systems are
+            implemented according to plan.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 data-id='faq4_question' class='py-3 font-semibold'>
+            Do you provide revisions to the drawings?
+          </h6>
+          <p data-id='faq4_answer'>
+            Yes, we offer revisions to ensure our designs meet your expectations
+            and needs.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 data-id='faq5_question' class='py-3 font-semibold'>
+            What size of projects can AJ Design Group handle?
+          </h6>
+          <p data-id='faq5_answer'>
+            From large commercial developments to small residential projects,
+            our skilled engineers deliver exceptional design services tailored
+            to your project's scale.
+          </p>
+        </div>
+
+        <div class='py-2'>
+          <h6 data-id='faq6_question' class='py-3 font-semibold'>
+            Is AJ Design Group licensed and insured?
+          </h6>
+          <p data-id='faq6_answer'>
+            Yes, we are fully licensed to operate in California and carry
+            insurance for all our services.
+          </p>
+        </div>
+      </div>
     </section>
   </article>
 </Layout>
 
 <style>
   section {
-    @apply container mx-auto px-6;
+    @apply container mx-auto px-3 sm:px-5 md:px-8 lg:px-12;
   }
 </style>
